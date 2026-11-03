@@ -1,73 +1,62 @@
-function mostrarAviso(texto) {
-  var aviso = document.getElementById("aviso");
-  if (aviso == null) {
+var toast = document.getElementById("toast");
+var tempoToast;
+
+function mostrarToast(texto) {
+  if (toast == null) {
     return;
   }
-  aviso.textContent = texto;
-  aviso.classList.add("visivel");
-  setTimeout(function () {
-    aviso.classList.remove("visivel");
-  }, 2500);
+  toast.textContent = texto;
+  toast.classList.add("is-show");
+  clearTimeout(tempoToast);
+  tempoToast = setTimeout(function () {
+    toast.classList.remove("is-show");
+  }, 2600);
 }
 
-var botoesAviso = document.querySelectorAll("[data-aviso]");
-for (var a = 0; a < botoesAviso.length; a++) {
-  botoesAviso[a].addEventListener("click", function () {
-    mostrarAviso(this.dataset.aviso);
-  });
-}
-
-var formsBusca = document.querySelectorAll(".busca-topo");
-for (var b = 0; b < formsBusca.length; b++) {
-  formsBusca[b].addEventListener("submit", function (evento) {
+var linksVazios = document.querySelectorAll('a[href="#"]');
+for (var a = 0; a < linksVazios.length; a++) {
+  linksVazios[a].addEventListener("click", function (evento) {
     evento.preventDefault();
   });
 }
 
-var botoesOlho = document.querySelectorAll(".olho");
+var botoesToast = document.querySelectorAll("[data-toast]");
+for (var b = 0; b < botoesToast.length; b++) {
+  botoesToast[b].addEventListener("click", function () {
+    mostrarToast(this.dataset.toast);
+  });
+}
+
+var botoesOlho = document.querySelectorAll(".input__toggle");
 for (var c = 0; c < botoesOlho.length; c++) {
   botoesOlho[c].addEventListener("click", function () {
-    var campo = document.getElementById(this.dataset.alvo);
-    var icone = this.querySelector("i");
+    var campo = document.getElementById(this.dataset.target);
+    var icones = this.querySelectorAll("svg");
     if (campo.type == "password") {
       campo.type = "text";
-      icone.className = "fa-regular fa-eye-slash";
+      icones[0].hidden = true;
+      icones[1].hidden = false;
     } else {
       campo.type = "password";
-      icone.className = "fa-regular fa-eye";
+      icones[0].hidden = false;
+      icones[1].hidden = true;
     }
   });
 }
 
-var botoesAba = document.querySelectorAll(".abas button");
-for (var d = 0; d < botoesAba.length; d++) {
-  botoesAba[d].addEventListener("click", function () {
-    var irmaos = this.parentElement.children;
-    for (var e = 0; e < irmaos.length; e++) {
-      irmaos[e].classList.remove("ativo");
-    }
-    this.classList.add("ativo");
-  });
-}
-
-var botoesFavorito = document.querySelectorAll(".favorito");
-for (var f = 0; f < botoesFavorito.length; f++) {
-  botoesFavorito[f].addEventListener("click", function () {
-    var icone = this.querySelector("i");
-    this.classList.toggle("ativo");
-    if (this.classList.contains("ativo")) {
-      icone.className = "fa-solid fa-heart";
-    } else {
-      icone.className = "fa-regular fa-heart";
-    }
+var botoesFavorito = document.querySelectorAll("[data-favorito]");
+for (var d = 0; d < botoesFavorito.length; d++) {
+  botoesFavorito[d].addEventListener("click", function () {
+    this.classList.toggle("is-favorite");
+    this.setAttribute("aria-pressed", this.classList.contains("is-favorite"));
   });
 }
 
 var formCadastro = document.getElementById("form-cadastro");
 if (formCadastro != null) {
   var campoSenha = document.getElementById("senha");
-  var textoForca = document.getElementById("texto-forca");
-  var barraForca = document.getElementById("barra-forca");
+  var textoForca = document.getElementById("forca-texto");
+  var medidor = document.getElementById("forca-medidor");
   var erroCadastro = document.getElementById("erro-form");
 
   campoSenha.addEventListener("input", function () {
@@ -86,21 +75,15 @@ if (formCadastro != null) {
       pontos = pontos + 1;
     }
 
+    medidor.value = pontos;
     if (senha == "") {
       textoForca.textContent = "Digite uma senha";
-      barraForca.style.width = "0%";
     } else if (pontos <= 1) {
       textoForca.textContent = "Fraca";
-      barraForca.style.width = "30%";
-      barraForca.style.background = "#d32f2f";
     } else if (pontos <= 3) {
       textoForca.textContent = "Média";
-      barraForca.style.width = "65%";
-      barraForca.style.background = "#f5a300";
     } else {
       textoForca.textContent = "Forte";
-      barraForca.style.width = "100%";
-      barraForca.style.background = "#34c45a";
     }
   });
 
@@ -149,28 +132,29 @@ if (formLogin != null) {
   });
 }
 
-var botoesMenuPerfil = document.querySelectorAll(".menu-perfil button");
-for (var g = 0; g < botoesMenuPerfil.length; g++) {
-  botoesMenuPerfil[g].addEventListener("click", function () {
-    for (var h = 0; h < botoesMenuPerfil.length; h++) {
-      botoesMenuPerfil[h].classList.remove("ativo");
+var itensMenu = document.querySelectorAll(".panel-menu a");
+for (var e = 0; e < itensMenu.length; e++) {
+  itensMenu[e].addEventListener("click", function (evento) {
+    evento.preventDefault();
+    for (var f = 0; f < itensMenu.length; f++) {
+      itensMenu[f].removeAttribute("aria-current");
     }
-    this.classList.add("ativo");
+    this.setAttribute("aria-current", "true");
   });
 }
 
 var fotoPrincipal = document.getElementById("foto-principal");
 if (fotoPrincipal != null) {
-  var miniaturas = document.querySelectorAll(".miniaturas-pet button");
+  var miniaturas = document.querySelectorAll(".gallery__thumb");
   var contadorFotos = document.getElementById("contador-fotos");
 
-  for (var i = 0; i < miniaturas.length; i++) {
-    miniaturas[i].addEventListener("click", function () {
-      for (var j = 0; j < miniaturas.length; j++) {
-        miniaturas[j].classList.remove("ativo");
+  for (var g = 0; g < miniaturas.length; g++) {
+    miniaturas[g].addEventListener("click", function () {
+      for (var h = 0; h < miniaturas.length; h++) {
+        miniaturas[h].classList.remove("is-active");
       }
-      this.classList.add("ativo");
-      fotoPrincipal.src = this.querySelector("img").src;
+      this.classList.add("is-active");
+      fotoPrincipal.src = this.dataset.foto;
       contadorFotos.textContent = this.dataset.numero + "/4 fotos";
     });
   }

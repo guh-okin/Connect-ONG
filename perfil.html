@@ -1,209 +1,270 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Meu perfil - Helpet</title>
+  <meta name="description" content="Acompanhe seus pets, processos de adoção, doações e pets favoritos no Helpet.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo/style.css">
+  <link rel="stylesheet" href="estilo/novas-telas.css">
 </head>
-<body>
-  <header class="topo">
-    <div class="container topo-linha">
-      <a class="logo" href="#"><span class="logo-icone"><i class="fa-solid fa-paw"></i></span><span class="logo-texto">Helpet</span></a>
-      <nav class="menu-topo">
-        <a href="#">Início</a>
-        <a href="#">Adotar</a>
-        <a href="#">Doar Alimentos &amp; Ração</a>
-        <a href="#">ONGs Parceiras</a>
+
+<body class="home-page">
+
+<header class="site-header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html" aria-label="Helpet - Página inicial">
+        <img src="img/Logo helpet pequena.png" alt="Helpet">
+      </a>
+
+      <nav class="header__nav" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="catalogo.html">Adotar</a>
+        <a href="doacao.html">Doar Alimentos e Ração</a>
+        <a href="index.html#ongs">ONGs Parceiras</a>
       </nav>
-      <form class="busca-topo">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="Buscar cães, gatos ou abrigos...">
+
+      <form class="header__search" role="search" action="#">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.3-4.3"></path>
+        </svg>
+        <label class="visually-hidden" for="busca-header">Buscar cães, gatos ou abrigos</label>
+        <input id="busca-header" type="search" name="q" placeholder="Buscar cães, gatos ou abrigos...">
       </form>
-      <div class="topo-direita">
-        <button class="botao-cadastrar-pet" data-aviso="O cadastro de pets estará disponível em breve"><i class="fa-solid fa-circle-plus"></i> <span>Cadastrar Pet</span></button>
-        <button class="sino" data-aviso="Você não tem novas notificações"><i class="fa-regular fa-bell"></i></button>
-        <a class="usuario-topo" href="perfil.html">
-          <span class="avatar-icone"><i class="fa-regular fa-user"></i></span>
-          <span><strong>Mariana Alencar</strong>Tutor Protetor</span>
+
+      <div class="header__actions">
+        <a class="home-btn home-btn--register" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M8 12h8"></path>
+            <path d="M12 8v8"></path>
+          </svg>
+          Cadastrar Pet
+        </a>
+
+        <a class="header__icon-button" href="#" aria-label="Notificações">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+            <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
+          </svg>
+          <span class="notification-dot"></span>
+        </a>
+
+        <a class="header__profile" href="perfil.html">
+          <span class="profile__avatar">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </span>
+          <span class="profile__text">
+            <strong>Mariana Alencar</strong>
+            <small>Tutor Protetor</small>
+          </span>
         </a>
       </div>
     </div>
   </header>
-
-  <main class="container">
-    <section class="perfil-topo">
-      <div class="perfil-id">
-        <div class="foto-perfil">
-          <img src="https://loremflickr.com/300/300/woman?lock=41" alt="Mariana Alencar">
-          <i class="fa-solid fa-check"></i>
-        </div>
-        <div>
-          <h1>Mariana Alencar</h1>
-          <span class="selo-claro"><i class="fa-solid fa-hand-holding-heart"></i> Adotante &amp; Doadora Mensal</span>
-          <div class="perfil-dados">
-            <span><i class="fa-solid fa-location-dot"></i> São Paulo, SP</span>
-            <span><i class="fa-regular fa-calendar"></i> Membro acolhedor desde Mar/2023</span>
-          </div>
-          <button class="botao-verde" data-aviso="A edição de perfil estará disponível em breve"><i class="fa-solid fa-pen"></i> Editar Perfil</button>
-        </div>
-      </div>
-      <div class="estatisticas">
-        <div><i class="fa-solid fa-paw"></i><strong>2</strong>Pets Adotados</div>
-        <div><i class="fa-solid fa-bowl-food"></i><strong>45 kg</strong>Ração Doados</div>
-        <div><i class="fa-solid fa-building"></i><strong>3</strong>ONGs Apoiadas</div>
-      </div>
-    </section>
-
-    <div class="perfil-layout">
-      <aside>
-        <div class="caixa">
-          <div class="menu-perfil-topo"><span>Painel do Tutor</span><strong>Ativo</strong></div>
-          <nav class="menu-perfil">
-            <button class="ativo"><i class="fa-solid fa-table-cells-large"></i> Visão Geral <span><i class="fa-solid fa-chevron-right"></i></span></button>
-            <button><i class="fa-solid fa-paw"></i> Meus Pets <span>2</span></button>
-            <button><i class="fa-solid fa-hourglass-half"></i> Processos de Adoção <span class="ponto"></span></button>
-            <button><i class="fa-solid fa-piggy-bank"></i> Doações Mensais <span><i class="fa-solid fa-chevron-right"></i></span></button>
-            <button><i class="fa-regular fa-heart"></i> Pets Favoritos <span>4</span></button>
-            <button><i class="fa-solid fa-gear"></i> Configurações <span><i class="fa-solid fa-chevron-right"></i></span></button>
-          </nav>
-        </div>
-
-        <div class="campanha">
-          <div class="campanha-topo">
-            <i class="fa-solid fa-utensils"></i>
-            <span>Ativa</span>
-          </div>
-          <h3>Campanha Tigela Cheia</h3>
-          <p>Contribuição recorrente de R$ 30,00/mês destinada à compra de ração super premium para abrigos paulistas.</p>
-          <div class="progresso"><div></div></div>
-          <div class="campanha-rodape"><span>Próxima recarga: 15 de Junho</span><strong>9 meses ativo</strong></div>
-          <button class="botao-branco" data-aviso="Gerenciamento da assinatura em breve">Gerenciar Assinatura Solidária</button>
-        </div>
-      </aside>
-
-      <section>
-        <div class="caixa">
-          <div class="cabecalho-caixa">
-            <div>
-              <h2>Meus Pets da Família <span class="selo-claro">2 Adotados</span></h2>
-              <p>Animais que ganharam um lar com Mariana através do Helpet.</p>
+  <main class="profile-page">
+    <div class="container">
+      <section class="profile-hero" aria-labelledby="perfil-titulo">
+        <div class="profile-hero__who">
+          <div class="profile-hero__avatar" aria-hidden="true">MA<span class="profile-hero__verified"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></span></div>
+          <div>
+            <div class="profile-hero__name">
+              <h1 id="perfil-titulo">Mariana Alencar</h1>
+              <span class="tag-mint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"></path><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"></path><path d="m2 15 6 6"></path><path d="M19.5 8.5c.7-.7 1.5-1.6 1.5-2.7A2.73 2.73 0 0 0 16 4a2.78 2.78 0 0 0-5 1.8c0 1.2.8 2 1.5 2.8L16 12Z"></path></svg> Adotante &amp; Doadora Mensal</span>
             </div>
-            <button class="botao-menta" data-aviso="O cadastro de novos pets estará disponível em breve"><i class="fa-solid fa-plus"></i> Adicionar Novo Pet</button>
-          </div>
-          <div class="pets-grade">
-            <article class="pet-cartao">
-              <div class="pet-foto">
-                <img src="https://loremflickr.com/600/450/dog?lock=42" alt="Paçoca">
-                <span class="pet-tag">8 meses com a família</span>
-                <button class="favorito"><i class="fa-regular fa-heart"></i></button>
-              </div>
-              <div class="pet-nome"><h3>Paçoca</h3><span><i class="fa-solid fa-cake-candles"></i> 1 ano</span></div>
-              <p class="pet-desc">Cãozinho Caramelo • Macho • Médio Porte</p>
-              <div class="pet-acoes">
-                <button class="botao-branco" data-aviso="Carteira digital do Paçoca"><i class="fa-regular fa-id-card"></i> Carteira Digital</button>
-                <button data-aviso="Mais opções"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-              </div>
-            </article>
-            <article class="pet-cartao">
-              <div class="pet-foto">
-                <img src="https://loremflickr.com/600/450/cat?lock=43" alt="Mimi">
-                <span class="pet-tag">1 ano com a família</span>
-                <button class="favorito"><i class="fa-regular fa-heart"></i></button>
-              </div>
-              <div class="pet-nome"><h3>Mimi</h3><span><i class="fa-solid fa-cake-candles"></i> 2 anos</span></div>
-              <p class="pet-desc">Gatinha Tricolor • Fêmea • Porte Pequeno</p>
-              <div class="pet-acoes">
-                <button class="botao-branco" data-aviso="Carteira digital da Mimi"><i class="fa-regular fa-id-card"></i> Carteira Digital</button>
-                <button data-aviso="Mais opções"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-              </div>
-            </article>
+            <ul class="profile-hero__meta">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> São Paulo, SP</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4"></path><path d="M8 2v4"></path><path d="M3 10h18"></path></svg> Membro acolhedor desde Mar/2023</li>
+            </ul>
+            <button class="home-btn home-btn--dark" type="button" data-toast="A edição de perfil estará disponível em breve"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path></svg> Editar Perfil</button>
           </div>
         </div>
 
-        <div class="linha-dupla">
-          <div class="caixa">
-            <div class="cabecalho-caixa"><h2>Processo em Andamento</h2></div>
-            <div class="processo">
-              <img src="https://loremflickr.com/200/200/puppy?lock=44" alt="Bartô">
-              <div>
-                <strong>Bartô (3 meses)</strong>
-                <small>ONG SOS Patinhas Felizes • São Paulo</small>
-                <small class="verde">Inscrição enviada em 18/05/2024</small>
-              </div>
-            </div>
-            <div class="etapas">
-              <div class="feita">1. Formulário Aprovado</div>
-              <div class="atual">2. Entrevista Virtual</div>
-              <div>3. Visita de Adoção</div>
-            </div>
-            <button class="botao-largo" data-aviso="Abrindo as etapas da entrevista"><i class="fa-regular fa-comment-dots"></i> Acompanhar Etapas da Entrevista</button>
+        <div class="profile-stats">
+          <div class="profile-stat">
+            <span class="profile-stat__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="4.5" cy="10.5" r="1.8"></circle><circle cx="9" cy="5.5" r="1.8"></circle><circle cx="15" cy="5.5" r="1.8"></circle><circle cx="19.5" cy="10.5" r="1.8"></circle><path d="M12 11c-3 0-6 3.5-6 6.2 0 1.6 1.2 2.3 2.7 2.3 1.2 0 2.1-.5 3.3-.5s2.1.5 3.3.5c1.5 0 2.7-.7 2.7-2.3C18 14.5 15 11 12 11z"></path></svg></span>
+            <strong>2</strong>
+            <small>Pets Adotados</small>
           </div>
-
-          <div class="caixa">
-            <div class="cabecalho-caixa">
-              <h2><i class="fa-regular fa-heart laranja"></i> Pets Salvos</h2>
-              <p>4 pets</p>
-            </div>
-            <p class="dica">Amigos que você favoritou para acompanhar ou apoiar futuramente.</p>
-            <div class="salvos">
-              <img src="https://loremflickr.com/200/200/dog?lock=45" alt="Pet salvo 1">
-              <img src="https://loremflickr.com/200/200/cat?lock=46" alt="Pet salvo 2">
-              <img src="https://loremflickr.com/200/200/dog?lock=47" alt="Pet salvo 3">
-              <img src="https://loremflickr.com/200/200/dog?lock=48" alt="Pet salvo 4">
-            </div>
-            <button class="botao-lista" data-aviso="Abrindo a lista completa">Ver Lista Completa <i class="fa-solid fa-arrow-right"></i></button>
+          <div class="profile-stat profile-stat--orange">
+            <span class="profile-stat__icon profile-stat__icon--orange"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="M3.27 6.96 12 12.01l8.73-5.05"></path><path d="M12 22.08V12"></path></svg></span>
+            <strong>45 kg</strong>
+            <small>Ração Doados</small>
+          </div>
+          <div class="profile-stat profile-stat--blue">
+            <span class="profile-stat__icon profile-stat__icon--blue"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg></span>
+            <strong>3</strong>
+            <small>ONGs Apoiadas</small>
           </div>
         </div>
       </section>
+
+      <div class="dashboard">
+        <aside aria-label="Painel do tutor">
+          <nav class="panel panel-menu" aria-label="Painel do tutor">
+            <div class="panel-menu__head"><span>Painel do tutor</span><strong>Ativo</strong></div>
+          <a href="#" aria-current="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect></svg> Visão Geral<span class="panel-menu__end"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></span></a>
+          <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="4.5" cy="10.5" r="1.8"></circle><circle cx="9" cy="5.5" r="1.8"></circle><circle cx="15" cy="5.5" r="1.8"></circle><circle cx="19.5" cy="10.5" r="1.8"></circle><path d="M12 11c-3 0-6 3.5-6 6.2 0 1.6 1.2 2.3 2.7 2.3 1.2 0 2.1-.5 3.3-.5s2.1.5 3.3.5c1.5 0 2.7-.7 2.7-2.3C18 14.5 15 11 12 11z"></path></svg> Meus Pets<span class="panel-menu__count">2</span></a>
+          <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 22h14"></path><path d="M5 2h14"></path><path d="M17 22v-4.17a2 2 0 0 0-.59-1.41L12 12l-4.41 4.41A2 2 0 0 0 7 17.83V22"></path><path d="M7 2v4.17a2 2 0 0 0 .59 1.41L12 12l4.41-4.41A2 2 0 0 0 17 6.17V2"></path></svg> Processos de Adoção<span class="panel-menu__dot"></span></a>
+          <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2V5z"></path><path d="M2 9v1c0 1.1.9 2 2 2h1"></path></svg> Doações Mensais<span class="panel-menu__end"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></span></a>
+          <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"></path></svg> Pets Favoritos<span class="panel-menu__count">4</span></a>
+          <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7"></path><path d="M4 10V3"></path><path d="M12 21v-9"></path><path d="M12 8V3"></path><path d="M20 21v-5"></path><path d="M20 12V3"></path><path d="M1 14h6"></path><path d="M9 8h6"></path><path d="M17 16h6"></path></svg> Configurações<span class="panel-menu__end"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></span></a>
+          </nav>
+
+          <article class="mini-campaign">
+            <div class="mini-campaign__top">
+              <span class="mini-campaign__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path><path d="M7 2v20"></path><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path></svg></span>
+              <span class="mini-campaign__status">Ativa</span>
+            </div>
+            <h3>Campanha Tigela Cheia</h3>
+            <p>Contribuição recorrente de R$ 30,00/mês destinada à compra de ração super premium para abrigos paulistas.</p>
+            <progress class="progress" value="78" max="100" aria-label="Progresso da campanha">78%</progress>
+            <div class="mini-campaign__foot"><span>Próxima recarga: 15 de Junho</span><strong>9 meses ativo</strong></div>
+            <button class="home-btn home-btn--white home-btn--block" type="button" data-toast="O gerenciamento da assinatura estará disponível em breve">Gerenciar Assinatura Solidária</button>
+          </article>
+        </aside>
+
+        <div>
+          <section class="panel" aria-labelledby="familia-titulo">
+            <div class="panel__head">
+              <div>
+                <h2 id="familia-titulo">Meus Pets da Família <span class="tag-mint">2 Adotados</span></h2>
+                <p>Animais que ganharam um lar com Mariana através do Helpet.</p>
+              </div>
+              <button class="home-btn home-btn--mint" type="button" data-toast="O cadastro de novos pets estará disponível em breve"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg> Adicionar Novo Pet</button>
+            </div>
+            <div class="family-grid">
+            <article class="family-card">
+              <div class="family-card__image">
+                <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=700&q=80" alt="Cachorro caramelo deitado em uma manta" loading="lazy">
+                <span class="family-card__badge">8 meses com a família</span>
+                <button class="round-button" type="button" data-favorito aria-pressed="false" aria-label="Favoritar Paçoca"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"></path></svg></button>
+              </div>
+              <div class="family-card__title"><h3>Paçoca</h3><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"></path><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"></path><path d="M2 21h20"></path><path d="M7 8v3"></path><path d="M12 8v3"></path><path d="M17 8v3"></path></svg> 1 ano</span></div>
+              <p>Cãozinho Caramelo &bull; Macho &bull; Médio Porte</p>
+              <div class="family-card__actions">
+                <button class="home-btn home-btn--white" type="button" data-toast="Carteira digital de Paçoca em breve"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"></rect><circle cx="8" cy="12" r="2"></circle><path d="M13 10h5"></path><path d="M13 14h5"></path></svg> Carteira Digital</button>
+                <button class="icon-button" type="button" data-toast="Mais opções em breve" aria-label="Mais opções"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></button>
+              </div>
+            </article>
+            <article class="family-card">
+              <div class="family-card__image">
+                <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=700&q=80" alt="Gata tricolor olhando pela janela" loading="lazy">
+                <span class="family-card__badge">1 ano com a família</span>
+                <button class="round-button" type="button" data-favorito aria-pressed="false" aria-label="Favoritar Mimi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"></path></svg></button>
+              </div>
+              <div class="family-card__title"><h3>Mimi</h3><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"></path><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"></path><path d="M2 21h20"></path><path d="M7 8v3"></path><path d="M12 8v3"></path><path d="M17 8v3"></path></svg> 2 anos</span></div>
+              <p>Gatinha Tricolor &bull; Fêmea &bull; Porte Pequeno</p>
+              <div class="family-card__actions">
+                <button class="home-btn home-btn--white" type="button" data-toast="Carteira digital de Mimi em breve"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"></rect><circle cx="8" cy="12" r="2"></circle><path d="M13 10h5"></path><path d="M13 14h5"></path></svg> Carteira Digital</button>
+                <button class="icon-button" type="button" data-toast="Mais opções em breve" aria-label="Mais opções"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></button>
+              </div>
+            </article>
+            </div>
+          </section>
+
+          <div class="dashboard__row">
+            <section class="panel" aria-labelledby="processo-titulo">
+              <div class="panel__head"><h2 id="processo-titulo">Processo em Andamento</h2></div>
+              <div class="process-card">
+                <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=200&q=80" alt="Filhote Bartô" loading="lazy">
+                <div>
+                  <strong>Bartô (3 meses)</strong>
+                  <small>ONG SOS Patinhas Felizes &bull; São Paulo</small>
+                  <small class="is-green">Inscrição enviada em 18/05/2024</small>
+                </div>
+              </div>
+              <ul class="process-steps">
+                <li class="is-done">1. Formulário Aprovado</li>
+                <li class="is-current">2. Entrevista Virtual</li>
+                <li>3. Visita de Adoção</li>
+              </ul>
+              <button class="home-btn home-btn--dark home-btn--block" type="button" data-toast="Abrindo as etapas da entrevista"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg> Acompanhar Etapas da Entrevista</button>
+            </section>
+
+            <section class="panel" aria-labelledby="salvos-titulo">
+              <div class="panel__head">
+                <h2 id="salvos-titulo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"></path></svg> Pets Salvos</h2>
+                <p>4 pets</p>
+              </div>
+              <p class="panel__note">Amigos que você favoritou para acompanhar ou apoiar futuramente.</p>
+              <div class="saved-list">
+                <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?auto=format&fit=crop&w=200&q=80" alt="Pipoca" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=200&q=80" alt="Nina" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=200&q=80" alt="Bento" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=200&q=80" alt="Amora" loading="lazy">
+              </div>
+              <a class="list-link" href="catalogo.html">Ver Lista Completa <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+            </section>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 
-  <footer class="rodape">
+  <footer class="site-footer">
     <div class="container">
-      <div class="rodape-grade">
-        <div>
-          <a class="logo" href="#"><span class="logo-icone"><i class="fa-solid fa-paw"></i></span><span class="logo-texto">Helpet</span></a>
+      <div class="footer__main">
+        <div class="footer__brand">
+          <a class="footer__logo" href="index.html" aria-label="Helpet - Página inicial">
+            <img src="img/Logo helpet pequena.png" alt="Helpet">
+          </a>
           <p>Conectando corações, lares e animais resgatados. Apoio contínuo a ONGs com campanhas de adoção responsável e doação solidária de ração e cuidados veterinários.</p>
         </div>
-        <div>
-          <h4>Adoção &amp; Causa</h4>
-          <ul>
-            <li>Quero Adotar um Cão</li>
-            <li>Quero Adotar um Gato</li>
-            <li>Bancos de Alimentos</li>
-            <li>Cadastrar Resgatado</li>
-          </ul>
-        </div>
-        <div>
-          <h4>Institucional</h4>
-          <ul>
-            <li>Sobre o Helpet</li>
-            <li>Rede de Abrigos</li>
-            <li>Transparência &amp; Metas</li>
-            <li>Carreiras &amp; Voluntariado</li>
-          </ul>
-        </div>
-        <div>
-          <h4>Ajuda &amp; Suporte</h4>
-          <ul>
-            <li>Central de Dúvidas</li>
-            <li>Diretrizes de Adoção</li>
-            <li>Fale Conosco</li>
-            <li>Privacidade &amp; Termos</li>
-          </ul>
-        </div>
+
+        <nav class="footer__column" aria-label="Adoção e Causa">
+          <h3>Adoção &amp; Causa</h3>
+          <a href="catalogo.html">Quero Adotar um Cão</a>
+          <a href="catalogo.html">Quero Adotar um Gato</a>
+          <a href="doacao.html">Bancos de Alimentos</a>
+          <a href="#">Cadastrar Resgatado</a>
+        </nav>
+
+        <nav class="footer__column" aria-label="Institucional">
+          <h3>Institucional</h3>
+          <a href="#">Sobre o Helpet</a>
+          <a href="index.html#ongs">Rede de Abrigos</a>
+          <a href="#">Transparência &amp; Metas</a>
+          <a href="#">Carreiras &amp; Voluntariado</a>
+        </nav>
+
+        <nav class="footer__column" aria-label="Ajuda e Suporte">
+          <h3>Ajuda &amp; Suporte</h3>
+          <a href="#">Central de Dúvidas</a>
+          <a href="#">Diretrizes de Adoção</a>
+          <a href="#">Fale Conosco</a>
+          <a href="#">Privacidade &amp; Termos</a>
+        </nav>
       </div>
-      <div class="rodape-final">
-        <span>© 2026 Helpet Plataforma de Proteção Animal. Todos os direitos reservados.</span>
-        <span>Feito com amor e patinhas acolhidas</span>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 Helpet Plataforma de Proteção Animal. Todos os direitos reservados.</p>
+        <a href="#">
+          Feito com amor e patinhas acolhidas
+          <span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="4.5" cy="10.5" r="1.8"></circle>
+              <circle cx="9" cy="5.5" r="1.8"></circle>
+              <circle cx="15" cy="5.5" r="1.8"></circle>
+              <circle cx="19.5" cy="10.5" r="1.8"></circle>
+              <path d="M12 11c-3 0-6 3.5-6 6.2 0 1.6 1.2 2.3 2.7 2.3 1.2 0 2.1-.5 3.3-.5s2.1.5 3.3.5c1.5 0 2.7-.7 2.7-2.3C18 14.5 15 11 12 11z"></path>
+            </svg>
+          </span>
+        </a>
       </div>
     </div>
   </footer>
-  <div class="aviso" id="aviso"></div>
-  <script src="script.js"></script>
+
+  <div class="hp-toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script/script.js"></script>
 </body>
+
 </html>

@@ -4,51 +4,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Crie sua conta | Helpet</title>
+  <title>Criar conta - Helpet</title>
+  <meta name="description" content="Crie sua conta gratuita no Helpet e faça parte da maior rede de proteção animal do Brasil.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estilo/style.css">
+  <link rel="stylesheet" href="estilo/novas-telas.css">
 </head>
 
 <body>
 
   <header class="site-header">
     <div class="container header__inner">
-      <a class="logo" href="index.html" aria-label="Helpet - página inicial">
-        <img src="img/Logo%20helpet%20pequena.png" alt="Helpet" height="40">
+      <a class="logo" href="index.html" aria-label="Helpet - Página inicial">
+        <img src="img/Logo helpet pequena.png" alt="Helpet">
       </a>
       <nav class="header__nav" aria-label="Navegação principal">
-        <a href="/">Voltar para Home</a>
-        <a href="/suporte">Suporte</a>
+        <a href="index.html">Voltar para Home</a>
+        <a href="#">Suporte</a>
       </nav>
     </div>
   </header>
 
-  <main class="container main">
-    <section class="auth-card" aria-labelledby="auth-title">
-
+  <main class="main container">
+    <section class="auth-card" aria-labelledby="cadastro-titulo">
       <aside class="auth-card__aside">
-        <p class="badge">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16" />
-            <path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.8-2.8l-4.2 3.9" />
-            <path d="m2 15 6 6" />
-            <path d="M19.5 8.5c.7-.7 1.5-1.6 1.5-2.7A2.7 2.7 0 0 0 16 4a2.7 2.7 0 0 0-5 1.8c0 1.2.8 2 1.5 2.7L16 11Z" />
-          </svg>
-          Adoção consciente &amp; doações diretas
-        </p>
-
-        <h1 class="aside__title">Junte-se à maior rede de proteção animal do Brasil</h1>
-        <p class="aside__lead">Conectamos corações generosos a abrigos certificados, garantindo lares seguros e tigelas
-          sempre cheias.</p>
+        <span class="badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"></path><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"></path><path d="m2 15 6 6"></path><path d="M19.5 8.5c.7-.7 1.5-1.6 1.5-2.7A2.73 2.73 0 0 0 16 4a2.78 2.78 0 0 0-5 1.8c0 1.2.8 2 1.5 2.8L16 12Z"></path></svg> Adoção consciente &amp; doações diretas</span>
+        <h1 class="aside__title" id="cadastro-titulo">Junte-se à maior rede de proteção animal do Brasil</h1>
+        <p class="aside__lead">Conectamos corações generosos a abrigos certificados, garantindo lares seguros e tigelas sempre cheias.</p>
 
         <figure class="aside__figure">
-          <img src="assets/pets.jpg" alt="Gato e cachorro descansando juntos em um tapete aconchegante" width="640"
-            height="360">
+          <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80" alt="Cachorro e gato deitados juntos em uma manta">
           <figcaption class="aside__caption">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path
-                d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.8 5 6.3 5c2 0 3.7 1.1 4.7 2.7h2C14 6.1 15.700 5 17.700 5c3.500 0 5.400 3.600 3.900 6.900C19.500 16.400 12 21 12 21Z" />
-            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"></path></svg>
             <span><strong>Mais de 14.800 vidas salvas</strong><br>em 18 estados brasileiros</span>
             <span class="pill">+120 ONGs</span>
           </figcaption>
@@ -56,277 +45,118 @@
 
         <ul class="features">
           <li class="feature">
-            <span class="feature__icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path
-                  d="M20 13c0 5-3.500 7.500-7.700 8.900a1 1 0 0 1-.6 0C7.500 20.500 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.500-1.200 6.200-2.700a1.200 1.200 0 0 1 1.600 0C14.500 3.800 17 5 19 5a1 1 0 0 1 1 1z" />
-                <path d="m9 12 2 2 4-4" />
-              </svg>
-            </span>
+            <span class="feature__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg></span>
             <div>
-              <h2 class="feature__title">Adoção responsável e assistida</h2>
+              <p class="feature__title">Adoção responsável e assistida</p>
               <p>Acompanhamento pré e pós-adoção com suporte veterinário orientativo.</p>
             </div>
           </li>
           <li class="feature">
-            <span class="feature__icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect width="20" height="5" x="2" y="3" rx="1" />
-                <path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8" />
-                <path d="M10 12h4" />
-              </svg>
-            </span>
+            <span class="feature__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="M3.27 6.96 12 12.01l8.73-5.05"></path><path d="M12 22.08V12"></path></svg></span>
             <div>
-              <h2 class="feature__title">Doação transparente de ração e insumos</h2>
+              <p class="feature__title">Doação transparente de ração e insumos</p>
               <p>Rastreio em tempo real de cada quilo de alimento entregue aos abrigos.</p>
             </div>
           </li>
           <li class="feature">
-            <span class="feature__icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect width="7" height="7" x="3" y="3" rx="1" />
-                <rect width="7" height="7" x="14" y="3" rx="1" />
-                <rect width="7" height="7" x="3" y="14" rx="1" />
-                <path d="M14 17.500h7M17.500 14v7" />
-              </svg>
-            </span>
+            <span class="feature__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect></svg></span>
             <div>
-              <h2 class="feature__title">Painel exclusivo de apadrinhamento</h2>
+              <p class="feature__title">Painel exclusivo de apadrinhamento</p>
               <p>Receba fotos, relatórios de saúde e atualizações dos seus afilhados.</p>
             </div>
           </li>
         </ul>
 
-        <p class="aside__footer">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <circle cx="5" cy="10" r="2" />
-            <circle cx="9" cy="5" r="2" />
-            <circle cx="15" cy="5" r="2" />
-            <circle cx="19" cy="10" r="2" />
-            <path
-              d="M12 11c-3 0-6 3.500-6 6 0 2 1.800 3 3.500 2.500 1-.3 1.700-.5 2.500-.5s1.500.2 2.500.5C16.200 20 18 19 18 17c0-2.500-3-6-6-6Z" />
-          </svg>
-          Adoção que transforma. Doação que ajuda.
-        </p>
+        <p class="aside__footer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="4.5" cy="10.5" r="1.8"></circle><circle cx="9" cy="5.5" r="1.8"></circle><circle cx="15" cy="5.5" r="1.8"></circle><circle cx="19.5" cy="10.5" r="1.8"></circle><path d="M12 11c-3 0-6 3.5-6 6.2 0 1.6 1.2 2.3 2.7 2.3 1.2 0 2.1-.5 3.3-.5s2.1.5 3.3.5c1.5 0 2.7-.7 2.7-2.3C18 14.5 15 11 12 11z"></path></svg> Adoção que transforma. Doação que ajuda.</p>
       </aside>
 
       <div class="auth-card__form">
         <div class="form__top">
-          <p class="eyebrow">Cadastro gratuito</p>
-          <p class="step">Passo 1 de 2 • Perfil Rápido</p>
+          <span class="eyebrow">Cadastro gratuito</span>
+          <span class="step">Passo 1 de 2 &bull; Perfil Rápido</span>
         </div>
-        <h2 id="auth-title" class="form__title">Crie sua conta</h2>
+        <h2 class="form__title">Crie sua conta</h2>
         <p class="form__subtitle">Faça parte da comunidade que transforma a vida de milhares de bichinhos.</p>
 
-        <form action="#" method="post" novalidate>
-
-          <fieldset class="segmented">
-            <legend class="visually-hidden">Tipo de perfil</legend>
+        <form id="form-cadastro" novalidate>
+          <div class="segmented" role="radiogroup" aria-label="Tipo de perfil">
             <label class="segmented__option">
               <input type="radio" name="perfil" value="adotante" checked>
-              <span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path
-                    d="M19 14c1.500-1.500 3-3.200 3-5.500A5.500 5.500 0 0 0 16.500 3c-1.800 0-3 .5-4.500 2-1.500-1.500-2.700-2-4.500-2A5.500 5.500 0 0 0 2 8.500c0 2.300 1.500 4 3 5.500l7 7Z" />
-                </svg>
-                Quero Adotar / Apoiar
-              </span>
+              <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"></path></svg> Quero Adotar / Apoiar</span>
             </label>
             <label class="segmented__option">
               <input type="radio" name="perfil" value="ong">
-              <span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M3 10.500 12 3l9 7.500V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z" />
-                  <path d="M12 11v6M9 14h6" />
-                </svg>
-                Represento uma ONG / Abrigo
-              </span>
+              <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><path d="M9 22V12h6v10"></path></svg> Represento uma ONG / Abrigo</span>
             </label>
-          </fieldset>
+          </div>
 
           <div class="field">
-            <label for="nome">Nome completo <span class="required" aria-hidden="true">*</span></label>
-            <div class="input">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="8" r="4" />
-                <path d="M4 21a8 8 0 0 1 16 0" />
-              </svg>
-              <input type="text" id="nome" name="nome" placeholder="Seu nome completo" autocomplete="name" required>
+            <div class="field__label-row"><label for="nome">Nome completo <span class="required">*</span></label></div>
+            <div class="input"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><input type="text" id="nome" name="nome" placeholder="Seu nome completo" autocomplete="name"></div>
+          </div>
+
+          <div class="grid-2">
+            <div class="field">
+              <div class="field__label-row"><label for="email">E-mail <span class="required">*</span></label></div>
+              <div class="input"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg><input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" autocomplete="email"></div>
+            </div>
+            <div class="field">
+              <div class="field__label-row"><label for="telefone">Telefone / WhatsApp</label><span class="optional">Opcional</span></div>
+              <div class="input"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" autocomplete="tel"></div>
+              <p class="hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg> Para alertas sobre status de adoção</p>
             </div>
           </div>
 
           <div class="grid-2">
             <div class="field">
-              <label for="email">E-mail <span class="required" aria-hidden="true">*</span></label>
-              <div class="input">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <rect width="20" height="16" x="2" y="4" rx="2" />
-                  <path d="m22 7-10 6L2 7" />
-                </svg>
-                <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" autocomplete="email"
-                  required>
-              </div>
+              <div class="field__label-row"><label for="senha">Senha <span class="required">*</span></label></div>
+              <div class="input"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg><input type="password" id="senha" name="senha" placeholder="Mínimo 8 caracteres" autocomplete="new-password"><button class="input__toggle" type="button" data-target="senha" aria-label="Mostrar ou ocultar a senha"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"></path><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"></path><path d="M6.61 6.61A13.53 13.53 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"></path><path d="m2 2 20 20"></path></svg></button></div>
             </div>
             <div class="field">
-              <div class="field__label-row">
-                <label for="telefone">Telefone / WhatsApp</label>
-                <span class="optional">Opcional</span>
-              </div>
-              <div class="input">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path
-                    d="M22 16.900v3a2 2 0 0 1-2.200 2 19.800 19.800 0 0 1-8.600-3.100 19.500 19.500 0 0 1-6-6A19.800 19.800 0 0 1 2.100 4.200 2 2 0 0 1 4.100 2h3a2 2 0 0 1 2 1.700c.1 1 .4 1.900.7 2.800a2 2 0 0 1-.5 2.100L8.100 9.900a16 16 0 0 0 6 6l1.300-1.300a2 2 0 0 1 2.100-.4c.9.300 1.800.6 2.800.7a2 2 0 0 1 1.700 2z" />
-                </svg>
-                <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" autocomplete="tel"
-                  aria-describedby="telefone-ajuda">
-              </div>
-              <p id="telefone-ajuda" class="hint">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
-                  <path d="M10.300 21a1.900 1.900 0 0 0 3.400 0" />
-                </svg>
-                Para alertas sobre status de adoção
-              </p>
-            </div>
-          </div>
-
-          <div class="grid-2">
-            <div class="field">
-              <label for="senha">Senha <span class="required" aria-hidden="true">*</span></label>
-              <div class="input">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <rect width="18" height="11" x="3" y="11" rx="2" />
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                </svg>
-                <input type="password" id="senha" name="senha" placeholder="Mínimo 8 caracteres" minlength="8"
-                  autocomplete="new-password" required>
-                <button type="button" class="input__toggle" aria-label="Mostrar senha">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M2 12s3.500-7 10-7 10 7 10 7-3.500 7-10 7S2 12 2 12z" />
-                    <circle cx="12" cy="12" r="3" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="field">
-              <label for="confirmar-senha">Confirmar senha <span class="required" aria-hidden="true">*</span></label>
-              <div class="input">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M3.800 7.500 12 2l8.200 5.500v9L12 22l-8.200-5.500z" />
-                  <path d="m9 12 2 2 4-4" />
-                </svg>
-                <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Repita sua senha"
-                  minlength="8" autocomplete="new-password" required>
-                <button type="button" class="input__toggle" aria-label="Mostrar confirmação de senha">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M2 12s3.500-7 10-7 10 7 10 7-3.500 7-10 7S2 12 2 12z" />
-                    <circle cx="12" cy="12" r="3" />
-                  </svg>
-                </button>
-              </div>
+              <div class="field__label-row"><label for="confirmar">Confirmar senha <span class="required">*</span></label></div>
+              <div class="input"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg><input type="password" id="confirmar" name="confirmar" placeholder="Repita sua senha" autocomplete="new-password"><button class="input__toggle" type="button" data-target="confirmar" aria-label="Mostrar ou ocultar a confirmação da senha"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"></path><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"></path><path d="M6.61 6.61A13.53 13.53 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"></path><path d="m2 2 20 20"></path></svg></button></div>
             </div>
           </div>
 
           <div class="strength">
-            <div class="strength__row">
-              <span id="forca-label">Segurança da senha:</span>
-              <strong>Digite uma senha</strong>
-            </div>
-            <meter class="strength__meter" min="0" max="4" value="0" aria-labelledby="forca-label"></meter>
+            <div class="strength__row"><span>Segurança da senha:</span><strong id="forca-texto">Digite uma senha</strong></div>
+            <meter class="strength__meter" id="forca-medidor" min="0" max="4" value="0"></meter>
           </div>
 
           <div class="checks">
-            <label class="check">
-              <input type="checkbox" name="termos" required>
-              <span>Declaro que li e concordo com os <a href="/termos">Termos de Uso</a> e a <a
-                  href="/privacidade">Política de Privacidade</a> da Helpet.</span>
-            </label>
-            <label class="check">
-              <input type="checkbox" name="novidades">
-              <span>Desejo receber novidades sobre campanhas de ração, feiras de adoção e novos pets resgatados na minha
-                região.</span>
-            </label>
+            <label class="check"><input type="checkbox" id="termos"><span>Declaro que li e concordo com os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a> da Helpet.</span></label>
+            <label class="check"><input type="checkbox"><span>Desejo receber novidades sobre campanhas de ração, feiras de adoção e novos pets resgatados na minha região.</span></label>
           </div>
 
-            <a href="index.html" class="btn btn--primary"> Criar minha conta <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-            </a>
+          <p class="form__error" id="erro-form" role="alert"></p>
+          <button class="btn btn--primary" type="submit">Criar minha conta <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
 
-          <p class="divider"><span>ou cadastre-se com</span></p>
-
-          <button type="button" class="btn btn--google">
-            <svg width="22" height="22" viewBox="0 0 48 48" aria-hidden="true">
-              <path fill="#EA4335"
-                d="M24 9.500c3.500 0 6.600 1.200 9.100 3.600l6.800-6.800C35.800 2.400 30.300 0 24 0 14.600 0 6.500 5.400 2.600 13.200l7.900 6.100C12.400 13.600 17.700 9.500 24 9.500z" />
-              <path fill="#4285F4"
-                d="M46.500 24.500c0-1.600-.1-3.100-.4-4.500H24v9h12.700c-.6 3-2.200 5.500-4.700 7.200l7.600 5.900c4.400-4.100 6.900-10.100 6.900-17.600z" />
-              <path fill="#FBBC05"
-                d="M10.500 28.700A14.500 14.500 0 0 1 9.500 24c0-1.600.3-3.200.9-4.700l-7.900-6.100A24 24 0 0 0 0 24c0 3.900.9 7.500 2.600 10.800l7.900-6.100z" />
-              <path fill="#34A853"
-                d="M24 48c6.500 0 11.900-2.100 15.900-5.800l-7.600-5.900c-2.100 1.400-4.900 2.300-8.300 2.300-6.300 0-11.600-4.100-13.500-9.800l-7.900 6.100C6.500 42.600 14.600 48 24 48z" />
-            </svg>
-            Continuar com o Google
-          </button>
+          <p class="divider divider--upper">ou cadastre-se com</p>
+          <button class="btn btn--google" type="button" data-toast="O cadastro com Google estará disponível em breve">Continuar com o Google</button>
 
           <p class="login-link">Já possui uma conta? <a href="login.html">Faça Login</a></p>
         </form>
       </div>
     </section>
 
-    <section class="trust" aria-label="Garantias da plataforma">
-      <article class="trust__item">
-        <span class="trust__icon trust__icon--green" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2 4 5v6c0 5 3.400 9.400 8 11 4.600-1.600 8-6 8-11V5z" />
-          </svg>
-        </span>
-        <div>
-          <h3>Dados 100% Protegidos</h3>
-          <p>Conformidade total com a LGPD e criptografia de ponta a ponta.</p>
-        </div>
-      </article>
-      <article class="trust__item">
-        <span class="trust__icon trust__icon--blue" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2 4 5v6c0 5 3.400 9.400 8 11 4.600-1.600 8-6 8-11V5z" />
-            <path d="M12 8v6M9 11h6" />
-          </svg>
-        </span>
-        <div>
-          <h3>Abrigos Validados</h3>
-          <p>Toda instituição passa por vistoria prévia e auditoria voluntária.</p>
-        </div>
-      </article>
-      <article class="trust__item">
-        <span class="trust__icon trust__icon--orange" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="9" cy="8" r="3" />
-            <circle cx="17" cy="9" r="2.500" />
-            <path d="M3 20a6 6 0 0 1 12 0M15 15a5 5 0 0 1 6 5" />
-          </svg>
-        </span>
-        <div>
-          <h3>Comunidade Colaborativa</h3>
-          <p>Compartilhe histórias e apoie lares temporários na sua vizinhança.</p>
-        </div>
-      </article>
-    </section>
+    <ul class="trust">
+      <li class="trust__item">
+        <span class="trust__icon trust__icon--green"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg></span>
+        <div><h3>Dados 100% Protegidos</h3><p>Conformidade total com a LGPD e criptografia de ponta a ponta.</p></div>
+      </li>
+      <li class="trust__item">
+        <span class="trust__icon trust__icon--blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg></span>
+        <div><h3>Abrigos Validados</h3><p>Toda instituição passa por vistoria prévia e auditoria voluntária.</p></div>
+      </li>
+      <li class="trust__item">
+        <span class="trust__icon trust__icon--orange"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+        <div><h3>Comunidade Colaborativa</h3><p>Compartilhe histórias e apoie lares temporários na sua vizinhança.</p></div>
+      </li>
+    </ul>
   </main>
 
+  <div class="hp-toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script/script.js"></script>
 </body>
 
 </html>
