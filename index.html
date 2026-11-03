@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Encontre seu novo melhor amigo, conheça ONGs parceiras e ajude animais por meio da Helpet.">
-  <title>Helpet | Um novo amigo, milhares de alegrias</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Helpet - Adote um novo amigo</title>
+  <meta name="description" content="Plataforma de proteção animal que conecta abrigos sérios a famílias que transbordam amor. Adote, doe ração ou seja um lar temporário.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estilo/style.css">
 </head>
 
@@ -12,380 +16,385 @@
 
   <header class="site-header">
     <div class="container header__inner">
-
-      <a href="index.html" class="logo" aria-label="Helpet - Página inicial">
-        <img src="img/Logo-helpet-pequena.png" alt="Logo Helpet">
+      <a class="logo" href="index.html" aria-label="Helpet - Página inicial">
+        <img src="img/Logo helpet pequena.png" alt="Helpet">
       </a>
 
       <nav class="header__nav" aria-label="Navegação principal">
         <a href="index.html" aria-current="page">Início</a>
         <a href="#pets">Adotar</a>
-        <a href="#campanha">Doar Alimentos à Ração</a>
+        <a href="#campanha">Doar Alimentos e Ração</a>
         <a href="#ongs">ONGs Parceiras</a>
       </nav>
 
-      <form class="header__search" action="#pets" method="get" role="search">
-        <label class="visually-hidden" for="header-search">Buscar animais</label>
+      <form class="header__search" role="search" action="#">
         <svg viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="10.8" cy="10.8" r="6.8"></circle>
-          <path d="m16 16 4.5 4.5"></path>
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.3-4.3"></path>
         </svg>
-        <input id="header-search" type="search" name="busca" placeholder="Buscar cães, gatos e outros...">
+        <label class="visually-hidden" for="busca-header">Buscar cães, gatos ou abrigos</label>
+        <input id="busca-header" type="search" name="q" placeholder="Buscar cães, gatos ou abrigos...">
       </form>
 
       <div class="header__actions">
-        <a href="#ongs" class="home-btn home-btn--register">
+        <a class="home-btn home-btn--register" href="#">
           <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 5v14M5 12h14"></path>
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M8 12h8"></path>
+            <path d="M12 8v8"></path>
           </svg>
           Cadastrar Pet
         </a>
 
-        <a href="#notificacoes" class="header__icon-button" aria-label="Notificações">
+        <a class="header__icon-button" href="#" aria-label="Notificações">
           <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path>
-            <path d="M10 21h4"></path>
+            <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+            <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
           </svg>
           <span class="notification-dot"></span>
         </a>
 
-        <a href="#perfil" class="header__profile">
-          <span class="profile__avatar" aria-hidden="true">M</span>
+        <a class="header__profile" href="#">
+          <span class="profile__avatar">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </span>
           <span class="profile__text">
             <strong>Mariana Alencar</strong>
-            <small>Boas-vindas!</small>
+            <small>Tutor Protetor</small>
           </span>
         </a>
       </div>
-
     </div>
   </header>
 
   <main>
-
-    <!-- Hero -->
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-titulo">
       <div class="container hero__inner">
-
         <div class="hero__content">
-          <span class="hero__badge">
+          <p class="hero__badge">
             <span class="hero__badge-dot"></span>
             Mais de 12.000 vidas transformadas
-          </span>
-
-          <h1>
-            Um novo amigo,<br>
-            <span>milhares de alegrias!</span>
-          </h1>
-
-          <p class="hero__description">
-            Conectamos amigos sem lar a famílias que transformam amor.
-            Encontre seu companheiro ideal ou ajude quem mais precisa hoje mesmo.
           </p>
 
-          <form class="pet-search" action="#pets" method="get">
+          <h1 id="hero-titulo">Um novo amigo,<br><span>milhares de alegrias!</span></h1>
 
+          <p class="hero__description">
+            Conectamos abrigos sérios a famílias que transbordam amor. Encontre seu companheiro ideal ou ajude quem mais precisa hoje.
+          </p>
+
+          <form class="pet-search" action="#" aria-label="Buscar pets para adoção">
             <div class="pet-search__fields">
-
               <div class="pet-search__field">
-                <label for="species">ESPÉCIE</label>
+                <label for="filtro-especie">ESPÉCIE</label>
                 <div class="pet-search__select">
-                  <span class="field-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24">
-                      <path d="M12 21s-8-4.5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.5-8 11-8 11Z"></path>
+                  <span class="field-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <circle cx="4.5" cy="10.5" r="1.8"></circle>
+                      <circle cx="9" cy="5.5" r="1.8"></circle>
+                      <circle cx="15" cy="5.5" r="1.8"></circle>
+                      <circle cx="19.5" cy="10.5" r="1.8"></circle>
+                      <path d="M12 11c-3 0-6 3.5-6 6.2 0 1.6 1.2 2.3 2.7 2.3 1.2 0 2.1-.5 3.3-.5s2.1.5 3.3.5c1.5 0 2.7-.7 2.7-2.3C18 14.5 15 11 12 11z"></path>
                     </svg>
                   </span>
-                  <select id="species" name="especie">
-                    <option value="">Todos os pets</option>
-                    <option value="cao">Cães</option>
-                    <option value="gato">Gatos</option>
-                    <option value="outros">Outros</option>
+                  <select id="filtro-especie" name="especie">
+                    <option>Todos os pets</option>
+                    <option>Cães</option>
+                    <option>Gatos</option>
                   </select>
                 </div>
               </div>
 
               <div class="pet-search__field">
-                <label for="size">PORTE</label>
+                <label for="filtro-porte">PORTE</label>
                 <div class="pet-search__select">
-                  <span class="field-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24">
-                      <path d="M4 12h16M7 8l-3 4 3 4M17 8l3 4-3 4"></path>
+                  <span class="field-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <rect x="2" y="7" width="20" height="10" rx="2"></rect>
+                      <path d="M6 11v2"></path>
+                      <path d="M10 11v2"></path>
+                      <path d="M14 11v2"></path>
                     </svg>
                   </span>
-                  <select id="size" name="porte">
-                    <option value="">Qualquer porte</option>
-                    <option value="pequeno">Pequeno</option>
-                    <option value="medio">Médio</option>
-                    <option value="grande">Grande</option>
+                  <select id="filtro-porte" name="porte">
+                    <option>Qualquer porte</option>
+                    <option>Pequeno</option>
+                    <option>Médio</option>
+                    <option>Grande</option>
                   </select>
                 </div>
               </div>
 
               <div class="pet-search__field">
-                <label for="location">LOCALIZAÇÃO</label>
+                <label for="filtro-local">LOCALIZAÇÃO</label>
                 <div class="pet-search__select">
-                  <span class="field-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24">
-                      <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
-                      <circle cx="12" cy="10" r="2.5"></circle>
+                  <span class="field-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
                     </svg>
                   </span>
-                  <select id="location" name="localizacao">
-                    <option value="sapiranga">Sapiranga - RS</option>
-                    <option value="novo-hamburgo">Novo Hamburgo - RS</option>
-                    <option value="campo-bom">Campo Bom - RS</option>
-                    <option value="sao-leopoldo">São Leopoldo - RS</option>
-                    <option value="qualquer">Qualquer localização</option>
+                  <select id="filtro-local" name="localizacao">
+                    <option>Sapiranga - RS</option>
+                    <option>Porto Alegre - RS</option>
+                    <option>Novo Hamburgo - RS</option>
+                    <option>São Leopoldo - RS</option>
                   </select>
                 </div>
               </div>
-
             </div>
 
             <div class="pet-search__bottom">
               <details class="advanced-filter">
                 <summary>
                   <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M4 6h16M7 12h10M10 18h4"></path>
+                    <path d="M4 6h16"></path>
+                    <path d="M7 12h10"></path>
+                    <path d="M10 18h4"></path>
                   </svg>
                   Filtros avançados: idade, castração, temperamento
                 </summary>
-
                 <div class="advanced-filter__options">
                   <label>
                     Idade
                     <select name="idade">
-                      <option value="">Qualquer idade</option>
-                      <option value="filhote">Filhote</option>
-                      <option value="adulto">Adulto</option>
-                      <option value="idoso">Idoso</option>
+                      <option>Qualquer idade</option>
+                      <option>Filhote</option>
+                      <option>Adulto</option>
+                      <option>Idoso</option>
                     </select>
                   </label>
-
                   <label>
                     Castração
                     <select name="castracao">
-                      <option value="">Indiferente</option>
-                      <option value="sim">Castrado</option>
-                      <option value="nao">Não castrado</option>
+                      <option>Indiferente</option>
+                      <option>Castrado</option>
+                      <option>Não castrado</option>
                     </select>
                   </label>
-
                   <label>
                     Temperamento
                     <select name="temperamento">
-                      <option value="">Qualquer temperamento</option>
-                      <option value="calmo">Calmo</option>
-                      <option value="brincalhao">Brincalhão</option>
-                      <option value="sociavel">Sociável</option>
+                      <option>Qualquer</option>
+                      <option>Calmo</option>
+                      <option>Brincalhão</option>
+                      <option>Sociável</option>
                     </select>
                   </label>
                 </div>
               </details>
 
-              <button type="submit" class="home-btn home-btn--search">
+              <button class="home-btn home-btn--search" type="submit">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <circle cx="10.8" cy="10.8" r="6.8"></circle>
-                  <path d="m16 16 4.5 4.5"></path>
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.3-4.3"></path>
                 </svg>
                 Encontrar Pet
               </button>
             </div>
-
           </form>
 
-          <div class="hero__stats" aria-label="Estatísticas da Helpet">
+          <dl class="hero__stats">
             <div class="hero__stat">
-              <strong>1.480+</strong>
-              <span>Pets disponíveis</span>
+              <dt class="visually-hidden">Pets disponíveis</dt>
+              <dd><strong>1.480+</strong></dd>
+              <dd><span>Pets disponíveis</span></dd>
             </div>
             <div class="hero__stat">
-              <strong>100%</strong>
-              <span>ONGs verificadas</span>
+              <dt class="visually-hidden">ONGs verificadas</dt>
+              <dd><strong>100%</strong></dd>
+              <dd><span>ONGs verificadas</span></dd>
             </div>
             <div class="hero__stat">
-              <strong>320 ton</strong>
-              <span>Ração doada</span>
+              <dt class="visually-hidden">Ração doada</dt>
+              <dd><strong>320 ton</strong></dd>
+              <dd><span>Ração doada</span></dd>
             </div>
-          </div>
+          </dl>
         </div>
 
         <div class="hero__visual">
           <figure class="hero__photo">
-            <img
-              src="img/hero-adocao.jpg"
-              alt="Mulher sorrindo enquanto abraça seu cachorro em um parque"
-            >
+            <img src="img/hero-juliana-thor.jpg" alt="Mulher sorrindo abraçada a um cachorro golden retriever em um jardim">
             <figcaption class="hero__photo-caption">
-              <strong>Histórias de Sucesso</strong>
-              <p>“O lar mudou completamente nossa casa. Amor à primeira vista!”</p>
-              <span>Julia e Thor · Adotados há 3 meses</span>
+              <strong>História de Sucesso</strong>
+              <p>"O Thor mudou completamente nossa casa. Amor à primeira vista!"</p>
+              <span>Juliana e Thor &bull; Adotado há 3 meses</span>
             </figcaption>
           </figure>
 
           <div class="hero__photo-badge">
-            <span class="badge-check" aria-hidden="true">✓</span>
+            <span class="badge-check">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+            </span>
             <span>
               <strong>Adoção Responsável</strong>
-              <small>Transforme vidas hoje</small>
+              <small>Triagem 100% segura</small>
             </span>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- Atalhos -->
-    <section class="quick-access">
+    <section class="quick-access" aria-labelledby="acesso-titulo">
       <div class="container">
-
         <div class="section-heading section-heading--row">
           <div>
-            <span class="eyebrow">AÇÕES QUE SALVAM</span>
-            <h2>O que seu coração busca hoje?</h2>
+            <p class="eyebrow">AÇÕES QUE SALVAM</p>
+            <h2 id="acesso-titulo">O que seu coração busca hoje?</h2>
           </div>
-          <p>Escolha como deseja se conectar à nossa causa. Cada clique é uma esperança.</p>
+          <p>Escolha como deseja se conectar à nossa causa. Cada clique alimenta esperança.</p>
         </div>
 
         <div class="quick-access__grid">
-
-          <a href="#pets" class="quick-card">
-            <span class="quick-card__icon quick-card__icon--green" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <path d="M12 20s-8-4.5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9c0 6.5-8 11-8 11Z"></path>
+          <a class="quick-card" href="#pets">
+            <span class="quick-card__icon quick-card__icon--green">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"></path>
               </svg>
             </span>
             <strong>Quero Adotar</strong>
-            <span>Guie-se para achar seu novo amigo</span>
+            <span>Cães e gatos cheios de carinho à espera</span>
           </a>
 
-          <a href="#campanha" class="quick-card">
-            <span class="quick-card__icon quick-card__icon--orange" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <path d="M5 8h14v12H5zM4 5h16v3H4zM9 12h6"></path>
+          <a class="quick-card" href="#campanha">
+            <span class="quick-card__icon quick-card__icon--orange">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="5" rx="1"></rect>
+                <path d="M5 8v11a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8"></path>
+                <path d="M10 12h4"></path>
               </svg>
             </span>
             <strong>Doar Ração</strong>
-            <span>Compartilhe alegria com quem precisa</span>
+            <span>Campanha Tigela Cheia para abrigos</span>
           </a>
 
-          <a href="#ongs" class="quick-card">
-            <span class="quick-card__icon quick-card__icon--green" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <path d="M4 20V5h16v15M8 9h2M14 9h2M8 13h2M14 13h2M8 17h2M14 17h2"></path>
+          <a class="quick-card" href="#ongs">
+            <span class="quick-card__icon quick-card__icon--mint">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                <path d="M9 22v-4h6v4"></path>
+                <path d="M8 6h.01"></path>
+                <path d="M12 6h.01"></path>
+                <path d="M16 6h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M12 10h.01"></path>
+                <path d="M16 10h.01"></path>
+                <path d="M8 14h.01"></path>
+                <path d="M12 14h.01"></path>
+                <path d="M16 14h.01"></path>
               </svg>
             </span>
             <strong>Cadastrar Minha ONG</strong>
-            <span>Conecte sua instituição e ganhe visibilidade</span>
+            <span>Painel gratuito de gestão e triagem</span>
           </a>
 
-          <a href="#pets" class="quick-card">
-            <span class="quick-card__icon quick-card__icon--mint" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <path d="M4 11 12 4l8 7M7 10v10h10V10M10 20v-6h4v6"></path>
+          <a class="quick-card" href="#">
+            <span class="quick-card__icon quick-card__icon--mint">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <path d="M9 22V12h6v10"></path>
               </svg>
             </span>
             <strong>Lar Temporário</strong>
             <span>Acolhimento solidário até adoção final</span>
           </a>
-
         </div>
       </div>
     </section>
 
-    <!-- Como funciona -->
-    <section class="how-it-works">
+    <section class="how-it-works" aria-labelledby="como-funciona-titulo">
       <div class="container">
-
         <div class="section-heading section-heading--center">
-          <span class="section-tag">Simples, Transparente e Seguro</span>
-          <h2>Como Funciona a Adoção na Helpet</h2>
-          <p>
-            Construímos um fluxo 100% humanizado para garantir a segurança
-            dos animais e a certeza de um lar acolhedor.
-          </p>
+          <span class="section-tag">Simples, Transparente &amp; Seguro</span>
+          <h2 id="como-funciona-titulo">Como Funciona a Adoção no Helpet</h2>
+          <p>Construímos um fluxo 100% humanizado para garantir a segurança dos animais e a certeza de um lar acolhedor.</p>
         </div>
 
         <div class="steps-grid">
-
           <article class="step-card">
             <div class="step-card__top">
-              <span class="step-card__icon step-card__icon--mint" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <path d="M12 20s-8-4.5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9c0 6.5-8 11-8 11Z"></path>
+              <span class="step-card__icon step-card__icon--mint">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"></path>
+                  <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"></path>
+                  <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"></path>
+                  <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path>
                 </svg>
               </span>
               <strong>01</strong>
             </div>
             <h3>Escolha com Carinho</h3>
-            <p>
-              Navegue por perfis detalhados com histórias de cada pet,
-              carteiras de vacinas, fotos reais e temperamento.
-            </p>
+            <p>Navegue por perfis detalhados com histórico de saúde completo, carteira de vacinas, fotos reais e temperamento.</p>
           </article>
 
           <article class="step-card">
             <div class="step-card__top">
-              <span class="step-card__icon step-card__icon--blue" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <path d="M7 4h10v16H7zM9 8h6M9 12h6M9 16h4M5 7H4v13h12"></path>
+              <span class="step-card__icon step-card__icon--blue">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="8" y="2" width="8" height="4" rx="1"></rect>
+                  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                  <path d="M12 11h4"></path>
+                  <path d="M12 16h4"></path>
+                  <path d="M8 11h.01"></path>
+                  <path d="M8 16h.01"></path>
                 </svg>
               </span>
               <strong>02</strong>
             </div>
             <h3>Formulário &amp; Entrevista</h3>
-            <p>
-              Responda o formulário prévio e tire dúvidas com os
-              protetores e voluntários da ONG para garantir uma união ideal.
-            </p>
+            <p>Responda o formulário prévio e tire dúvidas com os protetores e voluntários da ONG para garantir um match ideal.</p>
           </article>
 
           <article class="step-card">
             <div class="step-card__top">
-              <span class="step-card__icon step-card__icon--orange" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <path d="M4 20h16M6 20V8l6-4 6 4v12M9 12h2M13 12h2M10 20v-5h4v5"></path>
+              <span class="step-card__icon step-card__icon--orange">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <path d="M9 22V12h6v10"></path>
                 </svg>
               </span>
               <strong>03</strong>
             </div>
             <h3>Acolha com Amor</h3>
-            <p>
-              Agende a visita presencial para conhecer seu novo amigo,
-              assine o termo digital e leve uma vida transformada para casa.
-            </p>
+            <p>Agende a visita presencial para conhecer seu novo amigo, assine o termo digital e leve uma vida transformada para casa.</p>
           </article>
-
         </div>
       </div>
     </section>
 
-    <!-- Pets disponíveis -->
-    <section class="pets-section" id="pets">
+    <section class="pets-section" id="pets" aria-labelledby="pets-titulo">
       <div class="container">
-
         <div class="section-heading section-heading--row">
           <div>
-            <span class="eyebrow">ADOÇÃO RESPONSÁVEL</span>
-            <h2>Esperando por carinho</h2>
-            <p>Eles já esperam ser abraçados e agora só precisam de uma família para amar.</p>
+            <p class="eyebrow">ADOÇÃO RESPONSÁVEL</p>
+            <h2 id="pets-titulo">Esperando por carinho</h2>
+            <p>Eles já superaram o abandono e agora só precisam de uma família para amar.</p>
           </div>
 
-          <nav class="pet-filters" aria-label="Filtrar animais por espécie">
-            <a href="#pets" class="pet-filter pet-filter--active" aria-current="true">Todos</a>
-            <a href="#pets" class="pet-filter">Cães</a>
-            <a href="#pets" class="pet-filter">Gatos</a>
-            <a href="#pets" class="pet-filter">Filhotes</a>
-            <a href="#pets" class="pet-filter">Casos Especiais</a>
-          </nav>
+          <div class="pet-filters" aria-label="Filtrar pets por categoria">
+            <a class="pet-filter pet-filter--active" href="#pets" aria-current="true">Todos</a>
+            <a class="pet-filter" href="#pets">Cães</a>
+            <a class="pet-filter" href="#pets">Gatos</a>
+            <a class="pet-filter" href="#pets">Filhotes</a>
+            <a class="pet-filter" href="#pets">Casos Especiais</a>
+          </div>
         </div>
 
         <div class="pets-grid">
-
           <article class="pet-card">
             <div class="pet-card__image">
-              <img src="img/pet-pipoca.jpg" alt="Pipoca, cachorro filhote de pelo marrom">
-              <span class="pet-card__favorite" aria-hidden="true">♡</span>
+              <img src="img/pet-pipoca.jpg" alt="Filhote caramelo sentado em um gramado" loading="lazy">
+              <button class="pet-card__favorite" type="button" aria-label="Favoritar Pipoca">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"></path>
+                </svg>
+              </button>
             </div>
             <div class="pet-card__content">
               <div class="pet-card__title">
@@ -394,22 +403,24 @@
               </div>
               <p class="pet-card__location">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
-                  <circle cx="12" cy="10" r="2.5"></circle>
+                  <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
                 </svg>
-                São Paulo, SP · Porte Médio
+                São Paulo, SP &bull; Porte Médio
               </p>
-              <p class="pet-card__description">
-                Dócil, brincalhona e parceira de todas as horas. Vai bem com outros cães e gatos.
-              </p>
-              <a href="#adocao-pipoca" class="pet-card__link">Quero Conhecer <span>›</span></a>
+              <p class="pet-card__description">Dócil, adora passear no parque e se dá bem com outros cães e gatos.</p>
+              <a class="pet-card__link" href="#">Quero Conhecer <span>&rarr;</span></a>
             </div>
           </article>
 
           <article class="pet-card">
             <div class="pet-card__image">
-              <img src="img/pet-luna.jpg" alt="Luna, cachorrinha de pelo branco">
-              <span class="pet-card__favorite" aria-hidden="true">♡</span>
+              <img src="img/pet-luna.jpg" alt="Cadela clara de pelo macio sentada na grama" loading="lazy">
+              <button class="pet-card__favorite" type="button" aria-label="Favoritar Luna">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"></path>
+                </svg>
+              </button>
             </div>
             <div class="pet-card__content">
               <div class="pet-card__title">
@@ -418,22 +429,24 @@
               </div>
               <p class="pet-card__location">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
-                  <circle cx="12" cy="10" r="2.5"></circle>
+                  <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
                 </svg>
-                Campinas, SP · Porte Grande
+                Campinas, SP &bull; Porte Grande
               </p>
-              <p class="pet-card__description">
-                Muito tranquila e amorosa, perfeita para famílias que gostam de companhia.
-              </p>
-              <a href="#adocao-luna" class="pet-card__link">Quero Conhecer <span>›</span></a>
+              <p class="pet-card__description">Muito tranquila e amorosa, perfeita para famílias que gostam de companhia...</p>
+              <a class="pet-card__link" href="#">Quero Conhecer <span>&rarr;</span></a>
             </div>
           </article>
 
           <article class="pet-card">
             <div class="pet-card__image">
-              <img src="img/pet-milo.jpg" alt="Milo, gatinho preto e branco">
-              <span class="pet-card__favorite" aria-hidden="true">♡</span>
+              <img src="img/pet-milo.jpg" alt="Gatinho preto e branco olhando para a câmera" loading="lazy">
+              <button class="pet-card__favorite" type="button" aria-label="Favoritar Milo">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"></path>
+                </svg>
+              </button>
             </div>
             <div class="pet-card__content">
               <div class="pet-card__title">
@@ -442,22 +455,24 @@
               </div>
               <p class="pet-card__location">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
-                  <circle cx="12" cy="10" r="2.5"></circle>
+                  <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
                 </svg>
-                Porto Alegre, RS · Porte Pequeno
+                Porto Alegre, RS &bull; Porte Peq.
               </p>
-              <p class="pet-card__description">
-                Oi, sou carinhoso, curioso e estou procurando uma família que me dê muito amor.
-              </p>
-              <a href="#adocao-milo" class="pet-card__link">Quero Conhecer <span>›</span></a>
+              <p class="pet-card__description">Curioso, castrado, usa caixa de areia perfeitamente e ama um bom carinho no...</p>
+              <a class="pet-card__link" href="#">Quero Conhecer <span>&rarr;</span></a>
             </div>
           </article>
 
           <article class="pet-card">
             <div class="pet-card__image">
-              <img src="img/pet-thor.jpg" alt="Thor, cachorro de pelo caramelo correndo em um parque">
-              <span class="pet-card__favorite" aria-hidden="true">♡</span>
+              <img src="img/pet-thor.jpg" alt="Cachorro caramelo correndo em um gramado" loading="lazy">
+              <button class="pet-card__favorite" type="button" aria-label="Favoritar Thor">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"></path>
+                </svg>
+              </button>
             </div>
             <div class="pet-card__content">
               <div class="pet-card__title">
@@ -466,44 +481,31 @@
               </div>
               <p class="pet-card__location">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
-                  <circle cx="12" cy="10" r="2.5"></circle>
+                  <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
                 </svg>
-                Curitiba, PR · Porte Médio
+                Curitiba, PR &bull; Porte Médio
               </p>
-              <p class="pet-card__description">
-                Carente e fiel! Cheio de energia para corridas matinais e muito companheirismo.
-              </p>
-              <a href="#adocao-thor" class="pet-card__link">Quero Conhecer <span>›</span></a>
+              <p class="pet-card__description">Caramelo raiz! Cheio de energia para corridas matinais e muito companheiro de...</p>
+              <a class="pet-card__link" href="#">Quero Conhecer <span>&rarr;</span></a>
             </div>
           </article>
-
         </div>
 
         <div class="pets-section__more">
-          <a href="#pets" class="home-btn home-btn--more">
-            Buscar mais pets para adoção (1.480 disponíveis)
-            <span aria-hidden="true">→</span>
-          </a>
+          <a class="home-btn home-btn--more" href="#">Buscar mais pets para adoção (1.480 disponíveis) <span>&rarr;</span></a>
         </div>
-
       </div>
     </section>
 
-    <!-- Campanha de doação -->
-    <section class="campaign-section" id="campanha">
+    <section class="campaign-section" id="campanha" aria-labelledby="campanha-titulo">
       <div class="container">
         <div class="campaign">
-
           <div class="campaign__content">
-            <span class="campaign__badge">CAMPANHA EMERGENCIAL DE ARRECADAÇÃO</span>
-
-            <h2>Campanha Tigela Cheia: Doe Alimento e Cuidados</h2>
-
+            <p class="campaign__badge">CAMPANHA EMERGENCIAL DE NUTRIÇÃO</p>
+            <h2 id="campanha-titulo">Campanha Tigela Cheia: Doe Alimento e Cuidados</h2>
             <p class="campaign__description">
-              Mais de 42 abrigos parceiros dependem das doações deste mês
-              para manter potes cheios e animais saudáveis. Sua doação de
-              100% é utilizada e distribuída por nossa rede.
+              Mais de 42 abrigos parceiros dependem das doações deste mês para manter potes cheios e animais saudáveis. Sua doação é 100% auditada e distribuída por necessidade.
             </p>
 
             <div class="campaign__progress">
@@ -511,14 +513,7 @@
                 <strong>18.500 kg arrecadados</strong>
                 <span>74% da meta (25.000 kg)</span>
               </div>
-              <div
-                class="campaign__progress-track"
-                role="progressbar"
-                aria-label="Progresso da arrecadação"
-                aria-valuenow="74"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
+              <div class="campaign__progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="74" aria-label="Progresso da meta de arrecadação">
                 <span></span>
               </div>
               <div class="campaign__progress-footer">
@@ -527,250 +522,247 @@
               </div>
             </div>
 
-            <fieldset class="donation-options">
-              <legend>Escolha seu pacote solidário</legend>
+            <form action="#">
+              <fieldset class="donation-options">
+                <legend>Escolha seu pacote solidário:</legend>
 
-              <label class="donation-option">
-                <input type="radio" name="donation" value="10">
-                <span>
-                  <strong>10 kg</strong>
-                  <small>R$ 45</small>
+                <label class="donation-option">
+                  <input type="radio" name="pacote" value="10">
+                  <span>
+                    <strong>10 kg</strong>
+                    <small>R$ 45</small>
+                  </span>
+                </label>
+
+                <label class="donation-option">
+                  <input type="radio" name="pacote" value="25" checked>
+                  <span>
+                    <strong>25 kg</strong>
+                    <small>R$ 110 (Mais doado)</small>
+                  </span>
+                </label>
+
+                <label class="donation-option">
+                  <input type="radio" name="pacote" value="50">
+                  <span>
+                    <strong>50 kg</strong>
+                    <small>R$ 200</small>
+                  </span>
+                </label>
+
+                <label class="donation-option">
+                  <input type="radio" name="pacote" value="outro">
+                  <span>
+                    <strong>Outro</strong>
+                    <small>Qualquer valor</small>
+                  </span>
+                </label>
+              </fieldset>
+
+              <div class="campaign__actions">
+                <button class="home-btn home-btn--donate" type="submit">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+                    <path d="M7 2v20"></path>
+                    <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"></path>
+                  </svg>
+                  Alimentar um Abrigo Agora
+                </button>
+                <span class="campaign__secure">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                  Transparência comprovada com notas e fotos
                 </span>
-              </label>
-
-              <label class="donation-option">
-                <input type="radio" name="donation" value="25" checked>
-                <span>
-                  <strong>25 kg</strong>
-                  <small>R$ 95 (Mais escolhido)</small>
-                </span>
-              </label>
-
-              <label class="donation-option">
-                <input type="radio" name="donation" value="50">
-                <span>
-                  <strong>50 kg</strong>
-                  <small>R$ 180</small>
-                </span>
-              </label>
-
-              <label class="donation-option">
-                <input type="radio" name="donation" value="custom">
-                <span>
-                  <strong>Outro</strong>
-                  <small>Qualquer valor</small>
-                </span>
-              </label>
-            </fieldset>
-
-            <div class="campaign__actions">
-              <a href="#doar" class="home-btn home-btn--donate">Quero ajudar um Abrigo Agora</a>
-              <span class="campaign__secure">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 3 4.5 6v5c0 5 3.2 8.2 7.5 10 4.3-1.8 7.5-5 7.5-10V6L12 3Z"></path>
-                  <path d="m9 12 2 2 4-4"></path>
-                </svg>
-                Transferência comprovada, com notas e fotos
-              </span>
-            </div>
+              </div>
+            </form>
           </div>
 
           <figure class="campaign__image">
-            <img src="img/campanha-tigela-cheia.jpg" alt="Cachorro caramelo ao lado de uma tigela de ração">
+            <img src="img/campanha-tigela-cheia.jpg" alt="Cachorro caramelo ao lado de uma tigela cheia de ração">
             <figcaption>
               <span>
                 <strong>Abrigo Estrela da Manhã</strong>
-                <small>120 cães e gatos beneficiados esta semana</small>
+                <small>140 cães e gatos atendidos esta semana.</small>
               </span>
               <span class="campaign__urgent">Estoque crítico</span>
             </figcaption>
           </figure>
-
         </div>
       </div>
     </section>
 
-    <!-- Blog -->
-    <section class="blog-section">
+    <section class="blog-section" aria-labelledby="blog-titulo">
       <div class="container">
-
         <div class="section-heading section-heading--row">
           <div>
-            <span class="eyebrow">CONTEÚDO &amp; EDUCAÇÃO ANIMAL</span>
-            <h2>Você Sabia? Dicas de Cuidado &amp; Amor</h2>
+            <p class="eyebrow">CONTEÚDO &amp; ORIENTAÇÃO</p>
+            <h2 id="blog-titulo">Você Sabia? Dicas de Cuidado &amp; Amor</h2>
           </div>
-          <a href="#blog" class="section-heading__link">Ver todos os artigos do Blog <span>→</span></a>
+          <a class="section-heading__link" href="#">Ver todos os artigos do Blog <span>&rarr;</span></a>
         </div>
 
         <div class="blog-grid">
-
           <article class="blog-card">
-            <a href="#artigo-adaptacao" class="blog-card__image">
-              <img src="img/blog-adaptacao.jpg" alt="Cachorro descansando confortavelmente em uma cama">
-              <span class="blog-card__category">É mais fácil do que parece</span>
+            <a class="blog-card__image" href="#">
+              <img src="img/blog-adaptacao.jpg" alt="Cachorro dormindo confortavelmente em uma manta dentro de casa" loading="lazy">
+              <span class="blog-card__category">4 min de leitura</span>
             </a>
             <div class="blog-card__content">
               <span class="blog-card__topic">ADAPTAÇÃO</span>
-              <h3>
-                <a href="#artigo-adaptacao">Guia de adaptação: primeiros dias do pet adotado em casa</a>
-              </h3>
-              <p>
-                Aprenda os segredos para deixar os primeiros dias mais tranquilos e transformar a chegada do seu novo pet em um momento...
-              </p>
+              <h3><a href="#">Guia de adaptação: primeiros dias do pet adotado em casa</a></h3>
+              <p>Aprenda a regra dos 3 dias, 3 semanas e 3 meses para transformar a chegada do seu novo pet em um momento...</p>
               <div class="blog-card__footer">
                 <span>Por Dra. Camila Rocha</span>
-                <a href="#artigo-adaptacao" aria-label="Ler artigo sobre adaptação">↗</a>
+                <a href="#" aria-label="Salvar artigo">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+                  </svg>
+                </a>
               </div>
             </div>
           </article>
 
           <article class="blog-card">
-            <a href="#artigo-vacinacao" class="blog-card__image">
-              <img src="img/blog-vacinacao.jpg" alt="Veterinária examinando um cachorro em uma clínica">
-              <span class="blog-card__category">É mais fácil do que parece</span>
+            <a class="blog-card__image" href="#">
+              <img src="img/blog-vacinacao.jpg" alt="Veterinária examinando um filhote sobre a mesa de atendimento" loading="lazy">
+              <span class="blog-card__category">3 min de leitura</span>
             </a>
             <div class="blog-card__content">
               <span class="blog-card__topic blog-card__topic--blue">SAÚDE PREVENTIVA</span>
-              <h3>
-                <a href="#artigo-vacinacao">A importância da vacinação V10 e antirrábica em dia</a>
-              </h3>
-              <p>
-                Proteja seu melhor amigo: veja quais são as vacinas essenciais e os programas disponíveis para manter sua saúde em dia...
-              </p>
+              <h3><a href="#">A importância da vacinação V10 e antirrábica em dia</a></h3>
+              <p>Proteja seu melhor amigo e toda a vizinhança conhecendo o cronograma essencial de imunização anual e vermifugação.</p>
               <div class="blog-card__footer">
-                <span>Por Vet Helper Hub</span>
-                <a href="#artigo-vacinacao" aria-label="Ler artigo sobre vacinação">↗</a>
+                <span>Por Vet Helpet Hub</span>
+                <a href="#" aria-label="Salvar artigo">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+                  </svg>
+                </a>
               </div>
             </div>
           </article>
 
           <article class="blog-card">
-            <a href="#artigo-ambiente" class="blog-card__image">
-              <img src="img/blog-ambiente.jpg" alt="Gato explorando uma sala preparada para recebê-lo">
-              <span class="blog-card__category">É mais fácil do que parece</span>
+            <a class="blog-card__image" href="#">
+              <img src="img/blog-gato.jpg" alt="Gato subindo em um arranhador ao lado de uma janela com tela de proteção" loading="lazy">
+              <span class="blog-card__category">5 min de leitura</span>
             </a>
             <div class="blog-card__content">
               <span class="blog-card__topic blog-card__topic--orange">COMPORTAMENTO FELINO</span>
-              <h3>
-                <a href="#artigo-ambiente">Como preparar o ambiente para receber um gato filhote</a>
-              </h3>
-              <p>
-                Dicas de enriquecimento ambiental, itens essenciais e higiene para tornar o lar perfeito para seu novo companheiro...
-              </p>
+              <h3><a href="#">Como preparar o ambiente para receber um gato filhote</a></h3>
+              <p>Dicas de gatificação, telas de proteção, tipos de areia higiênica e rotinas essenciais para um filhote se sentir em...</p>
               <div class="blog-card__footer">
-                <span>Por Equipe de Redação</span>
-                <a href="#artigo-ambiente" aria-label="Ler artigo sobre preparação do ambiente">↗</a>
+                <span>Por Equipe de Resgate</span>
+                <a href="#" aria-label="Salvar artigo">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+                  </svg>
+                </a>
               </div>
             </div>
           </article>
-
         </div>
       </div>
     </section>
 
-    <!-- Cadastro de ONG -->
-    <section class="ngo-section" id="ongs">
+    <section class="ngo-section" id="ongs" aria-labelledby="ong-titulo">
       <div class="container">
         <div class="ngo-cta">
-
-          <span class="ngo-cta__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M4 20V5h16v15M8 9h2M14 9h2M8 13h2M14 13h2M8 17h2M14 17h2"></path>
+          <span class="ngo-cta__icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
             </svg>
           </span>
-
-          <h2>Você representa uma ONG ou abrigo de animais?</h2>
-
-          <p>
-            Tenha acesso gratuito ao painel unificado de triagem, campanhas de
-            arrecadação de ração e vitrine nacional de adoção. Juntos salvamos
-            mais vidas.
-          </p>
-
-          <a href="#cadastro-ong" class="home-btn home-btn--ngo">
-            Cadastrar ONG <span>→</span>
-          </a>
+          <h2 id="ong-titulo">Você representa uma ONG ou abrigo de animais?</h2>
+          <p>Tenha acesso gratuito ao painel unificado de triagem, campanhas de arrecadação de ração e vitrine nacional de adoção. Juntos salvamos mais vidas.</p>
+          <a class="home-btn home-btn--ngo" href="#">Cadastrar ONG <span>&rarr;</span></a>
 
           <div class="ngo-cta__benefits">
             <span>
               <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="m9 12 2 2 4-4"></path>
               </svg>
               100% Gratuito para sempre
             </span>
             <span>
               <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4 6h16v12H4zM8 10h8M8 14h5"></path>
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="m9 12 2 2 4-4"></path>
               </svg>
               Gestão de fichas e fichas médicas
             </span>
             <span>
               <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 20s-8-4.5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9c0 6.5-8 11-8 11Z"></path>
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="m9 12 2 2 4-4"></path>
               </svg>
-              Suporte às campanhas de animais
+              Suporte a campanhas de alimento
             </span>
           </div>
-
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- Rodapé -->
   <footer class="site-footer">
     <div class="container">
-
       <div class="footer__main">
-
         <div class="footer__brand">
-          <a href="index.html" class="footer__logo">
+          <a class="footer__logo" href="index.html" aria-label="Helpet - Página inicial">
             <img src="img/Logo-helpet-pequena.png" alt="Helpet">
           </a>
-          <p>
-            Conectando corações, lares e animais resgatados.
-            Apoio contínuo a ONGs e campanhas de adoção responsáveis
-            e doação solidária de rações e cuidados veterinários.
-          </p>
+          <p>Conectando corações, lares e animais resgatados. Apoio contínuo a ONGs com campanhas de adoção responsável e doação solidária de ração e cuidados veterinários.</p>
         </div>
 
-        <div class="footer__column">
+        <nav class="footer__column" aria-label="Adoção e Causa">
           <h3>Adoção &amp; Causa</h3>
           <a href="#pets">Quero Adotar um Cão</a>
           <a href="#pets">Quero Adotar um Gato</a>
-          <a href="#pets">Encontre seu Melhor Amigo</a>
-          <a href="#campanha">Cadastrar um Resgatado</a>
-        </div>
+          <a href="#campanha">Bancos de Alimentos</a>
+          <a href="#">Cadastrar Resgatado</a>
+        </nav>
 
-        <div class="footer__column">
+        <nav class="footer__column" aria-label="Institucional">
           <h3>Institucional</h3>
-          <a href="#sobre">Sobre a Helpet</a>
+          <a href="#">Sobre o Helpet</a>
           <a href="#ongs">Rede de Abrigos</a>
-          <a href="#ongs">Transparência &amp; Impacto</a>
-          <a href="#parcerias">Carreiras e Voluntariado</a>
-        </div>
+          <a href="#">Transparência &amp; Metas</a>
+          <a href="#">Carreiras &amp; Voluntariado</a>
+        </nav>
 
-        <div class="footer__column">
+        <nav class="footer__column" aria-label="Ajuda e Suporte">
           <h3>Ajuda &amp; Suporte</h3>
-          <a href="#contato">Central de Dúvidas</a>
-          <a href="#contato">Diretrizes de Adoção</a>
-          <a href="#contato">Fale Conosco</a>
-          <a href="#privacidade">Privacidade e Termos</a>
-        </div>
-
+          <a href="#">Central de Dúvidas</a>
+          <a href="#">Diretrizes de Adoção</a>
+          <a href="#">Fale Conosco</a>
+          <a href="#">Privacidade &amp; Termos</a>
+        </nav>
       </div>
 
       <div class="footer__bottom">
-        <p>© 2026 Helpet. Todos os direitos reservados.</p>
-        <a href="#ongs">
-          Feito com amor para proteger vidas
-          <span aria-hidden="true">♡</span>
+        <p>&copy; 2026 Helpet Plataforma de Proteção Animal. Todos os direitos reservados.</p>
+        <a href="#">
+          Feito com amor e patinhas acolhidas
+          <span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="4.5" cy="10.5" r="1.8"></circle>
+              <circle cx="9" cy="5.5" r="1.8"></circle>
+              <circle cx="15" cy="5.5" r="1.8"></circle>
+              <circle cx="19.5" cy="10.5" r="1.8"></circle>
+              <path d="M12 11c-3 0-6 3.5-6 6.2 0 1.6 1.2 2.3 2.7 2.3 1.2 0 2.1-.5 3.3-.5s2.1.5 3.3.5c1.5 0 2.7-.7 2.7-2.3C18 14.5 15 11 12 11z"></path>
+            </svg>
+          </span>
         </a>
       </div>
-
     </div>
   </footer>
 
 </body>
+
 </html>
