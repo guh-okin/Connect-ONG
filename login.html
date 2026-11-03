@@ -3,89 +3,190 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Entrar - Helpet</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <title>Acesse sua conta | Helpet</title>
+  <link rel="stylesheet" href="estilo/style.css">
 </head>
-<body class="pagina-auth">
-  <header class="topo-auth">
-    <div class="container">
-      <a class="logo" href="#"><span class="logo-icone"><i class="fa-solid fa-paw"></i></span><span class="logo-texto">Helpet</span></a>
-      <nav class="links-auth">
-        <a href="#">Voltar para Home</a>
-        <a href="#">Suporte</a>
+<body>
+
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html" aria-label="Helpet - página inicial">
+        <img src="img/Logo%20helpet%20pequena.png" alt="Helpet" height="40">
+      </a>
+      <nav class="header__nav" aria-label="Navegação principal">
+        <a href="index.html">Voltar para Home</a>
+        <a href="suporte.html">Suporte</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <div class="auth-caixa">
-      <section class="auth-lado centralizado">
-        <div class="etiquetas-linha">
-          <span class="etiqueta"><i class="fa-solid fa-heart"></i> COMUNIDADE HELPET</span>
-          <span class="etiqueta"><i class="fa-regular fa-circle-check"></i> 100% Auditado</span>
-        </div>
-        <div class="foto-quadrada">
-          <img src="https://loremflickr.com/600/450/dog?lock=32" alt="Cachorro e gato">
-          <span>+12.000 pets</span>
-        </div>
-        <h2>Adoção que transforma. Doação que ajuda.</h2>
-        <p>Conectando corações generosos a abrigos e animais que sonham com um lar acolhedor.</p>
-        <div class="numeros-lado">
-          <div><strong>380+ ONGs</strong>Parcerias ativas no Brasil</div>
-          <div class="direita"><strong>99.4%</strong>Adoções felizes</div>
-        </div>
-      </section>
+  <main class="container main">
+    <section class="auth-card" aria-labelledby="login-title">
 
-      <section class="auth-form">
-        <p class="sobre"><strong><i class="fa-regular fa-heart"></i> Que bom te ver de volta!</strong></p>
-        <h1>Acesse sua conta</h1>
-        <p class="subtitulo">Entre para acompanhar seus pets favoritos, histórico de apadrinhamentos e doações.</p>
-
-        <div class="abas">
-          <button type="button" class="ativo"><i class="fa-regular fa-heart"></i> Sou Adotante / Doador</button>
-          <button type="button"><i class="fa-solid fa-house-chimney"></i> Sou ONG / Protetor</button>
+      <aside class="auth-card__aside auth-card__aside--center">
+        <div class="aside__top">
+          <p class="badge badge--upper">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.1C.9 8.6 2.8 5 6.3 5c2 0 3.700 1.100 4.700 2.700h2C14 6.100 15.700 5 17.700 5c3.500 0 5.400 3.600 3.900 6.900C19.500 16.400 12 21 12 21Z"/></svg>
+            Comunidade Helpet
+          </p>
+          <p class="badge">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.8 7.5 12 2l8.200 5.500v9L12 22l-8.200-5.500z"/><path d="m9 12 2 2 4-4"/></svg>
+            100% Auditado
+          </p>
         </div>
 
-        <form id="form-login">
-          <div class="campo">
-            <div class="campo-rotulo"><label for="email">E-mail institucional ou pessoal</label></div>
-            <div class="entrada"><i class="fa-regular fa-envelope"></i><input type="text" id="email" placeholder="exemplo@email.com"></div>
+        <figure class="aside__photo">
+          <img src="img/pets.jpg" alt="Gato e cachorro descansando juntos em uma manta macia" width="400" height="400">
+          <figcaption class="pill pill--white"><span class="dot" aria-hidden="true"></span>+12.000 pets</figcaption>
+        </figure>
+
+        <div class="aside__text">
+          <h1 class="aside__title aside__title--md">Adoção que transforma. Doação que ajuda.</h1>
+          <p class="aside__lead">Conectando corações generosos a abrigos e animais que sonham com um lar acolhedor.</p>
+        </div>
+
+        <dl class="aside__stats">
+          <span class="stats__icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.100.2-1.400.6L3 16"/><path d="m7 20 1.600-1.400c.3-.4.8-.6 1.400-.6h4c1.100 0 2.100-.4 2.800-1.200l4.600-4.400a2 2 0 0 0-2.800-2.800l-4.200 3.900"/><path d="m2 15 6 6"/><path d="M19.500 8.500c.7-.7 1.500-1.600 1.500-2.700A2.700 2.700 0 0 0 16 4a2.700 2.700 0 0 0-5 1.800c0 1.200.8 2 1.500 2.700L16 11Z"/></svg>
+          </span>
+          <div class="stats__item">
+            <dt>380+ ONGs</dt>
+            <dd>Parceiras ativas no Brasil</dd>
           </div>
-          <div class="campo">
-            <div class="campo-rotulo"><label for="senha">Senha</label><a href="#">Esqueceu sua senha?</a></div>
-            <div class="entrada"><i class="fa-solid fa-lock"></i><input type="password" id="senha" placeholder="Digite sua senha"><button type="button" class="olho" data-alvo="senha"><i class="fa-regular fa-eye"></i></button></div>
+          <div class="stats__item stats__item--end">
+            <dt>99.4%</dt>
+            <dd>Adoções felizes</dd>
           </div>
-          <div class="linha-opcoes">
-            <label><input type="checkbox"> Lembrar deste dispositivo</label>
-            <span class="selo-ssl"><i class="fa-solid fa-lock"></i> 256-bit SSL</span>
+        </dl>
+      </aside>
+
+      <div class="auth-card__form">
+        <p class="welcome">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 11V6a2 2 0 0 0-4 0v5"/><path d="M14 10V4a2 2 0 0 0-4 0v6"/><path d="M10 10.500V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.800 0-4.500-.9-5.700-2.400L3.400 16a2 2 0 0 1 3.200-2.400L8 15"/></svg>
+          Que bom te ver de volta!
+        </p>
+        <h2 id="login-title" class="form__title">Acesse sua conta</h2>
+        <p class="form__subtitle">Entre para acompanhar seus pets favoritos, histórico de apadrinhamentos e doações.</p>
+
+        <form action="#" method="post" novalidate>
+
+          <fieldset class="segmented">
+            <legend class="visually-hidden">Tipo de perfil</legend>
+            <label class="segmented__option">
+              <input type="radio" name="perfil" value="adotante" checked>
+              <span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.500-1.500 3-3.200 3-5.500A5.500 5.500 0 0 0 16.500 3c-1.800 0-3 .5-4.500 2-1.500-1.500-2.700-2-4.500-2A5.500 5.500 0 0 0 2 8.500c0 2.300 1.500 4 3 5.500l7 7Z"/></svg>
+                Sou Adotante / Doador
+              </span>
+            </label>
+            <label class="segmented__option">
+              <input type="radio" name="perfil" value="ong">
+              <span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4M10 10h4M10 14h4M10 18h4"/></svg>
+                Sou ONG / Protetor
+              </span>
+            </label>
+          </fieldset>
+
+          <div class="field">
+            <label for="login-email">E-mail institucional ou pessoal</label>
+            <div class="input">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+              <input type="email" id="login-email" name="email" placeholder="exemplo@email.com" autocomplete="username" required>
+            </div>
           </div>
-          <p class="mensagem-erro" id="erro-form"></p>
-          <button type="submit" class="botao-degrade">Entrar na Helpet <i class="fa-solid fa-arrow-right"></i></button>
+
+          <div class="field">
+            <div class="field__label-row">
+              <label for="login-senha">Senha</label>
+              <a class="link-sm" href="esqueci-senha.html">Esqueceu sua senha?</a>
+            </div>
+            <div class="input">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <input type="password" id="login-senha" name="senha" placeholder="••••••••••••" autocomplete="current-password" required>
+              <button type="button" class="input__toggle" aria-label="Mostrar senha">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.500-7 10-7 10 7 10 7-3.500 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <label class="check">
+              <input type="checkbox" name="lembrar">
+              <span>Lembrar deste dispositivo</span>
+            </label>
+            <span class="badge-ssl">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              256-bit SSL
+            </span>
+          </div>
+
+          <button type="submit" class="btn btn--primary">
+            Entrar na Helpet
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+
+          <p class="divider divider--upper"><span>Ou continue com</span></p>
+
+          <div class="social">
+            <button type="button" class="btn btn--social">
+              <svg width="22" height="22" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.500 0 6.600 1.200 9.100 3.600l6.800-6.800C35.800 2.400 30.300 0 24 0 14.600 0 6.500 5.400 2.600 13.200l7.900 6.100C12.400 13.600 17.700 9.500 24 9.500z"/><path fill="#4285F4" d="M46.500 24.500c0-1.600-.1-3.100-.4-4.500H24v9h12.700c-.6 3-2.200 5.500-4.700 7.200l7.600 5.900c4.400-4.100 6.900-10.100 6.900-17.600z"/><path fill="#FBBC05" d="M10.500 28.700A14.500 14.500 0 0 1 9.500 24c0-1.600.3-3.200.9-4.700l-7.900-6.100A24 24 0 0 0 0 24c0 3.900.9 7.500 2.600 10.800l7.900-6.100z"/><path fill="#34A853" d="M24 48c6.500 0 11.900-2.100 15.900-5.800l-7.600-5.900c-2.100 1.400-4.900 2.300-8.300 2.300-6.300 0-11.600-4.100-13.500-9.800l-7.900 6.100C6.500 42.600 14.600 48 24 48z"/></svg>
+              Google
+            </button>
+            <button type="button" class="btn btn--social">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.400 12.600c0-2.400 2-3.500 2.100-3.600-1.100-1.700-2.900-1.900-3.500-1.900-1.500-.2-2.900.9-3.700.9-.8 0-1.900-.9-3.200-.8-1.600 0-3.100 1-4 2.400-1.700 3-.4 7.300 1.200 9.700.8 1.200 1.800 2.500 3 2.400 1.200 0 1.700-.8 3.100-.8 1.500 0 1.900.8 3.200.8 1.300 0 2.100-1.200 2.900-2.300.9-1.300 1.300-2.600 1.300-2.700-.1 0-2.400-.9-2.400-3.700zM14 5.500c.7-.8 1.100-1.900 1-3-.9 0-2.100.6-2.800 1.400-.6.700-1.200 1.800-1 2.900 1 .1 2.100-.5 2.800-1.300z"/></svg>
+              Apple ID
+            </button>
+          </div>
+
+          <p class="login-link">Não possui uma conta? <a href="cadastro.html">Cadastre-se gratuitamente</a></p>
+          <p class="secure-note">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.400 9.400 8 11 4.600-1.600 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg>
+            Ambiente protegido com criptografia de ponta a ponta
+          </p>
         </form>
+      </div>
+    </section>
 
-        <p class="divisor">OU CONTINUE COM</p>
-        <div class="botoes-sociais dois">
-          <button type="button" class="botao-social" data-aviso="Login com Google em breve"><i class="fa-brands fa-google"></i> Google</button>
-          <button type="button" class="botao-social" data-aviso="Login com Apple em breve"><i class="fa-brands fa-apple"></i> Apple ID</button>
+    <section class="trust trust--4" aria-label="Garantias da plataforma">
+      <article class="trust__item trust__item--compact">
+        <span class="trust__icon trust__icon--mint" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.800 7.500 12 2l8.200 5.500v9L12 22l-8.200-5.500z"/><path d="m9 12 2 2 4-4"/></svg>
+        </span>
+        <div>
+          <h3>ONGs Verificadas</h3>
+          <p>Critério rigoroso</p>
         </div>
-
-        <p class="troca-conta">Não possui uma conta? <a href="cadastro.html">Cadastre-se gratuitamente</a></p>
-        <p class="nota-seguranca"><i class="fa-solid fa-shield-halved"></i> Ambiente protegido com criptografia de ponta a ponta</p>
-      </section>
-    </div>
-
-    <div class="garantias-auth">
-      <div class="garantia"><i class="fa-solid fa-circle-check"></i><div><strong>ONGs Verificadas</strong>Critério rigoroso</div></div>
-      <div class="garantia"><i class="fa-solid fa-shield-halved"></i><div><strong>Doações Seguras</strong>Transparência total</div></div>
-      <div class="garantia"><i class="fa-solid fa-headset"></i><div><strong>Suporte Humano</strong>Acompanhamento real</div></div>
-      <div class="garantia"><i class="fa-solid fa-paw"></i><div><strong>Pós-Adoção Ativo</strong>Saúde e adaptação</div></div>
-    </div>
+      </article>
+      <article class="trust__item trust__item--compact">
+        <span class="trust__icon trust__icon--mint" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 5v6c0 5 3.400 9.400 8 11 4.600-1.600 8-6 8-11V5z"/></svg>
+        </span>
+        <div>
+          <h3>Doações Seguras</h3>
+          <p>Transparência total</p>
+        </div>
+      </article>
+      <article class="trust__item trust__item--compact">
+        <span class="trust__icon trust__icon--mint" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><path d="M21 16a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2zM3 16a2 2 0 0 0 2 2h1v-6H5a2 2 0 0 0-2 2z"/></svg>
+        </span>
+        <div>
+          <h3>Suporte Humano</h3>
+          <p>Acompanhamento real</p>
+        </div>
+      </article>
+      <article class="trust__item trust__item--compact">
+        <span class="trust__icon trust__icon--mint" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="10" r="2"/><circle cx="9" cy="5" r="2"/><circle cx="15" cy="5" r="2"/><circle cx="19" cy="10" r="2"/><path d="M12 11c-3 0-6 3.500-6 6 0 2 1.800 3 3.500 2.500 1-.3 1.700-.5 2.500-.5s1.500.2 2.500.5C16.200 20 18 19 18 17c0-2.500-3-6-6-6Z"/></svg>
+        </span>
+        <div>
+          <h3>Pós-Adoção Ativo</h3>
+          <p>Saúde e adaptação</p>
+        </div>
+      </article>
+    </section>
   </main>
 
-  <div class="aviso" id="aviso"></div>
-  <script src="script.js"></script>
 </body>
 </html>
