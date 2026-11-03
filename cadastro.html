@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Criar conta - Helpet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina-auth">
+  <header class="topo-auth">
+    <div class="container">
+      <a class="logo" href="#"><span class="logo-icone"><i class="fa-solid fa-paw"></i></span><span class="logo-texto">Helpet</span></a>
+      <nav class="links-auth">
+        <a href="#">Voltar para Home</a>
+        <a href="#">Suporte</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="auth-caixa">
+      <section class="auth-lado">
+        <span class="etiqueta"><i class="fa-solid fa-hand-holding-heart"></i> Adoção consciente &amp; doações diretas</span>
+        <h2>Junte-se à maior rede de proteção animal do Brasil</h2>
+        <p>Conectamos corações generosos a abrigos certificados, garantindo lares seguros e tigelas sempre cheias.</p>
+        <div class="foto-cartao">
+          <img src="https://loremflickr.com/600/450/dog?lock=31" alt="Cachorro deitado">
+          <div class="foto-legenda">
+            <div><strong>Mais de 14.800 vidas salvas</strong>em 18 estados brasileiros</div>
+            <span class="mini">+120 ONGs</span>
+          </div>
+        </div>
+        <ul class="beneficios">
+          <li><i class="fa-solid fa-shield-halved"></i><div><strong>Adoção responsável e assistida</strong>Acompanhamento pré e pós-adoção com suporte veterinário orientativo.</div></li>
+          <li><i class="fa-solid fa-box-open"></i><div><strong>Doação transparente de ração e insumos</strong>Rastreio em tempo real de cada quilo de alimento entregue aos abrigos.</div></li>
+          <li><i class="fa-solid fa-qrcode"></i><div><strong>Painel exclusivo de apadrinhamento</strong>Receba fotos, relatórios de saúde e atualizações dos seus afilhados.</div></li>
+        </ul>
+        <p class="lema"><i class="fa-solid fa-paw"></i> Adoção que transforma. Doação que ajuda.</p>
+      </section>
+
+      <section class="auth-form">
+        <div class="sobre"><strong>Cadastro gratuito</strong><span>Passo 1 de 2 • Perfil Rápido</span></div>
+        <h1>Crie sua conta</h1>
+        <p class="subtitulo">Faça parte da comunidade que transforma a vida de milhares de bichinhos.</p>
+
+        <div class="abas">
+          <button type="button" class="ativo"><i class="fa-regular fa-heart"></i> Quero Adotar / Apoiar</button>
+          <button type="button"><i class="fa-solid fa-house-chimney"></i> Represento uma ONG / Abrigo</button>
+        </div>
+
+        <form id="form-cadastro">
+          <div class="campo">
+            <div class="campo-rotulo"><label for="nome">Nome completo <em>*</em></label></div>
+            <div class="entrada"><i class="fa-regular fa-user"></i><input type="text" id="nome" placeholder="Seu nome completo"></div>
+          </div>
+
+          <div class="grade-campos">
+            <div class="campo">
+              <div class="campo-rotulo"><label for="email">E-mail <em>*</em></label></div>
+              <div class="entrada"><i class="fa-regular fa-envelope"></i><input type="text" id="email" placeholder="seu.email@exemplo.com"></div>
+            </div>
+            <div class="campo">
+              <div class="campo-rotulo"><label for="telefone">Telefone / WhatsApp</label><small>Opcional</small></div>
+              <div class="entrada"><i class="fa-solid fa-phone"></i><input type="text" id="telefone" placeholder="(00) 00000-0000"></div>
+              <p class="dica"><i class="fa-regular fa-bell"></i> Para alertas sobre status de adoção</p>
+            </div>
+          </div>
+
+          <div class="grade-campos">
+            <div class="campo">
+              <div class="campo-rotulo"><label for="senha">Senha <em>*</em></label></div>
+              <div class="entrada"><i class="fa-solid fa-lock"></i><input type="password" id="senha" placeholder="Mínimo 8 caracteres"><button type="button" class="olho" data-alvo="senha"><i class="fa-regular fa-eye"></i></button></div>
+            </div>
+            <div class="campo">
+              <div class="campo-rotulo"><label for="confirmar">Confirmar senha <em>*</em></label></div>
+              <div class="entrada"><i class="fa-regular fa-circle-check"></i><input type="password" id="confirmar" placeholder="Repita sua senha"><button type="button" class="olho" data-alvo="confirmar"><i class="fa-regular fa-eye"></i></button></div>
+            </div>
+          </div>
+
+          <div class="forca">
+            <div class="forca-topo"><span>Segurança da senha:</span><strong id="texto-forca">Digite uma senha</strong></div>
+            <div class="barra-forca"><div id="barra-forca"></div></div>
+          </div>
+
+          <label class="marcar"><input type="checkbox" id="termos"><span>Declaro que li e concordo com os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a> da Helpet.</span></label>
+          <label class="marcar"><input type="checkbox"><span>Desejo receber novidades sobre campanhas de ração, feiras de adoção e novos pets resgatados na minha região.</span></label>
+
+          <p class="mensagem-erro" id="erro-form"></p>
+          <button type="submit" class="botao-degrade">Criar minha conta <i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+
+        <p class="divisor">ou cadastre-se com</p>
+        <div class="botoes-sociais">
+          <button type="button" class="botao-social" data-aviso="Cadastro com Google em breve"><i class="fa-brands fa-google"></i> Continuar com o Google</button>
+        </div>
+        <p class="troca-conta">Já possui uma conta? <a href="login.html">Faça Login</a></p>
+      </section>
+    </div>
+
+    <div class="garantias-auth">
+      <div class="garantia"><i class="fa-solid fa-shield-halved"></i><div><strong>Dados 100% Protegidos</strong>Conformidade total com a LGPD e criptografia de ponta a ponta.</div></div>
+      <div class="garantia"><i class="fa-solid fa-circle-check"></i><div><strong>Abrigos Validados</strong>Toda instituição passa por vistoria prévia e auditoria voluntária.</div></div>
+      <div class="garantia"><i class="fa-solid fa-people-group"></i><div><strong>Comunidade Colaborativa</strong>Compartilhe histórias e apoie lares temporários na sua vizinhança.</div></div>
+    </div>
+  </main>
+
+  <div class="aviso" id="aviso"></div>
+  <script src="script.js"></script>
+</body>
+</html>

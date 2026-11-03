@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meu perfil - Helpet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="container topo-linha">
+      <a class="logo" href="#"><span class="logo-icone"><i class="fa-solid fa-paw"></i></span><span class="logo-texto">Helpet</span></a>
+      <nav class="menu-topo">
+        <a href="#">Início</a>
+        <a href="#">Adotar</a>
+        <a href="#">Doar Alimentos &amp; Ração</a>
+        <a href="#">ONGs Parceiras</a>
+      </nav>
+      <form class="busca-topo">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Buscar cães, gatos ou abrigos...">
+      </form>
+      <div class="topo-direita">
+        <button class="botao-cadastrar-pet" data-aviso="O cadastro de pets estará disponível em breve"><i class="fa-solid fa-circle-plus"></i> <span>Cadastrar Pet</span></button>
+        <button class="sino" data-aviso="Você não tem novas notificações"><i class="fa-regular fa-bell"></i></button>
+        <a class="usuario-topo" href="perfil.html">
+          <span class="avatar-icone"><i class="fa-regular fa-user"></i></span>
+          <span><strong>Mariana Alencar</strong>Tutor Protetor</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="perfil-topo">
+      <div class="perfil-id">
+        <div class="foto-perfil">
+          <img src="https://loremflickr.com/300/300/woman?lock=41" alt="Mariana Alencar">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <div>
+          <h1>Mariana Alencar</h1>
+          <span class="selo-claro"><i class="fa-solid fa-hand-holding-heart"></i> Adotante &amp; Doadora Mensal</span>
+          <div class="perfil-dados">
+            <span><i class="fa-solid fa-location-dot"></i> São Paulo, SP</span>
+            <span><i class="fa-regular fa-calendar"></i> Membro acolhedor desde Mar/2023</span>
+          </div>
+          <button class="botao-verde" data-aviso="A edição de perfil estará disponível em breve"><i class="fa-solid fa-pen"></i> Editar Perfil</button>
+        </div>
+      </div>
+      <div class="estatisticas">
+        <div><i class="fa-solid fa-paw"></i><strong>2</strong>Pets Adotados</div>
+        <div><i class="fa-solid fa-bowl-food"></i><strong>45 kg</strong>Ração Doados</div>
+        <div><i class="fa-solid fa-building"></i><strong>3</strong>ONGs Apoiadas</div>
+      </div>
+    </section>
+
+    <div class="perfil-layout">
+      <aside>
+        <div class="caixa">
+          <div class="menu-perfil-topo"><span>Painel do Tutor</span><strong>Ativo</strong></div>
+          <nav class="menu-perfil">
+            <button class="ativo"><i class="fa-solid fa-table-cells-large"></i> Visão Geral <span><i class="fa-solid fa-chevron-right"></i></span></button>
+            <button><i class="fa-solid fa-paw"></i> Meus Pets <span>2</span></button>
+            <button><i class="fa-solid fa-hourglass-half"></i> Processos de Adoção <span class="ponto"></span></button>
+            <button><i class="fa-solid fa-piggy-bank"></i> Doações Mensais <span><i class="fa-solid fa-chevron-right"></i></span></button>
+            <button><i class="fa-regular fa-heart"></i> Pets Favoritos <span>4</span></button>
+            <button><i class="fa-solid fa-gear"></i> Configurações <span><i class="fa-solid fa-chevron-right"></i></span></button>
+          </nav>
+        </div>
+
+        <div class="campanha">
+          <div class="campanha-topo">
+            <i class="fa-solid fa-utensils"></i>
+            <span>Ativa</span>
+          </div>
+          <h3>Campanha Tigela Cheia</h3>
+          <p>Contribuição recorrente de R$ 30,00/mês destinada à compra de ração super premium para abrigos paulistas.</p>
+          <div class="progresso"><div></div></div>
+          <div class="campanha-rodape"><span>Próxima recarga: 15 de Junho</span><strong>9 meses ativo</strong></div>
+          <button class="botao-branco" data-aviso="Gerenciamento da assinatura em breve">Gerenciar Assinatura Solidária</button>
+        </div>
+      </aside>
+
+      <section>
+        <div class="caixa">
+          <div class="cabecalho-caixa">
+            <div>
+              <h2>Meus Pets da Família <span class="selo-claro">2 Adotados</span></h2>
+              <p>Animais que ganharam um lar com Mariana através do Helpet.</p>
+            </div>
+            <button class="botao-menta" data-aviso="O cadastro de novos pets estará disponível em breve"><i class="fa-solid fa-plus"></i> Adicionar Novo Pet</button>
+          </div>
+          <div class="pets-grade">
+            <article class="pet-cartao">
+              <div class="pet-foto">
+                <img src="https://loremflickr.com/600/450/dog?lock=42" alt="Paçoca">
+                <span class="pet-tag">8 meses com a família</span>
+                <button class="favorito"><i class="fa-regular fa-heart"></i></button>
+              </div>
+              <div class="pet-nome"><h3>Paçoca</h3><span><i class="fa-solid fa-cake-candles"></i> 1 ano</span></div>
+              <p class="pet-desc">Cãozinho Caramelo • Macho • Médio Porte</p>
+              <div class="pet-acoes">
+                <button class="botao-branco" data-aviso="Carteira digital do Paçoca"><i class="fa-regular fa-id-card"></i> Carteira Digital</button>
+                <button data-aviso="Mais opções"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+              </div>
+            </article>
+            <article class="pet-cartao">
+              <div class="pet-foto">
+                <img src="https://loremflickr.com/600/450/cat?lock=43" alt="Mimi">
+                <span class="pet-tag">1 ano com a família</span>
+                <button class="favorito"><i class="fa-regular fa-heart"></i></button>
+              </div>
+              <div class="pet-nome"><h3>Mimi</h3><span><i class="fa-solid fa-cake-candles"></i> 2 anos</span></div>
+              <p class="pet-desc">Gatinha Tricolor • Fêmea • Porte Pequeno</p>
+              <div class="pet-acoes">
+                <button class="botao-branco" data-aviso="Carteira digital da Mimi"><i class="fa-regular fa-id-card"></i> Carteira Digital</button>
+                <button data-aviso="Mais opções"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="linha-dupla">
+          <div class="caixa">
+            <div class="cabecalho-caixa"><h2>Processo em Andamento</h2></div>
+            <div class="processo">
+              <img src="https://loremflickr.com/200/200/puppy?lock=44" alt="Bartô">
+              <div>
+                <strong>Bartô (3 meses)</strong>
+                <small>ONG SOS Patinhas Felizes • São Paulo</small>
+                <small class="verde">Inscrição enviada em 18/05/2024</small>
+              </div>
+            </div>
+            <div class="etapas">
+              <div class="feita">1. Formulário Aprovado</div>
+              <div class="atual">2. Entrevista Virtual</div>
+              <div>3. Visita de Adoção</div>
+            </div>
+            <button class="botao-largo" data-aviso="Abrindo as etapas da entrevista"><i class="fa-regular fa-comment-dots"></i> Acompanhar Etapas da Entrevista</button>
+          </div>
+
+          <div class="caixa">
+            <div class="cabecalho-caixa">
+              <h2><i class="fa-regular fa-heart laranja"></i> Pets Salvos</h2>
+              <p>4 pets</p>
+            </div>
+            <p class="dica">Amigos que você favoritou para acompanhar ou apoiar futuramente.</p>
+            <div class="salvos">
+              <img src="https://loremflickr.com/200/200/dog?lock=45" alt="Pet salvo 1">
+              <img src="https://loremflickr.com/200/200/cat?lock=46" alt="Pet salvo 2">
+              <img src="https://loremflickr.com/200/200/dog?lock=47" alt="Pet salvo 3">
+              <img src="https://loremflickr.com/200/200/dog?lock=48" alt="Pet salvo 4">
+            </div>
+            <button class="botao-lista" data-aviso="Abrindo a lista completa">Ver Lista Completa <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape-grade">
+        <div>
+          <a class="logo" href="#"><span class="logo-icone"><i class="fa-solid fa-paw"></i></span><span class="logo-texto">Helpet</span></a>
+          <p>Conectando corações, lares e animais resgatados. Apoio contínuo a ONGs com campanhas de adoção responsável e doação solidária de ração e cuidados veterinários.</p>
+        </div>
+        <div>
+          <h4>Adoção &amp; Causa</h4>
+          <ul>
+            <li>Quero Adotar um Cão</li>
+            <li>Quero Adotar um Gato</li>
+            <li>Bancos de Alimentos</li>
+            <li>Cadastrar Resgatado</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Institucional</h4>
+          <ul>
+            <li>Sobre o Helpet</li>
+            <li>Rede de Abrigos</li>
+            <li>Transparência &amp; Metas</li>
+            <li>Carreiras &amp; Voluntariado</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Ajuda &amp; Suporte</h4>
+          <ul>
+            <li>Central de Dúvidas</li>
+            <li>Diretrizes de Adoção</li>
+            <li>Fale Conosco</li>
+            <li>Privacidade &amp; Termos</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rodape-final">
+        <span>© 2026 Helpet Plataforma de Proteção Animal. Todos os direitos reservados.</span>
+        <span>Feito com amor e patinhas acolhidas</span>
+      </div>
+    </div>
+  </footer>
+  <div class="aviso" id="aviso"></div>
+  <script src="script.js"></script>
+</body>
+</html>

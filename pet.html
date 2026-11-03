@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paçoca - Detalhes e Adoção - Helpet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="container topo-linha">
+      <a class="logo" href="#"><span class="logo-icone"><i class="fa-solid fa-paw"></i></span><span class="logo-texto">Helpet</span></a>
+      <nav class="menu-topo">
+        <a href="#">Início</a>
+        <a href="#">Adotar</a>
+        <a href="#">Doar Alimentos &amp; Ração</a>
+        <a href="#">ONGs Parceiras</a>
+      </nav>
+      <form class="busca-topo">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Buscar cães, gatos ou abrigos...">
+      </form>
+      <div class="topo-direita">
+        <button class="botao-cadastrar-pet" data-aviso="O cadastro de pets estará disponível em breve"><i class="fa-solid fa-circle-plus"></i> <span>Cadastrar Pet</span></button>
+        <button class="sino" data-aviso="Você não tem novas notificações"><i class="fa-regular fa-bell"></i></button>
+        <a class="usuario-topo" href="perfil.html">
+          <span class="avatar-icone"><i class="fa-regular fa-user"></i></span>
+          <span><strong>Mariana Alencar</strong>Tutor Protetor</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="pet-layout">
+      <section>
+        <div class="galeria-principal">
+          <img id="foto-principal" src="https://loremflickr.com/800/700/dog?lock=21" alt="Paçoca">
+          <span class="selo-disponivel">Disponível para Adoção</span>
+          <div class="botoes-galeria">
+            <button class="favorito"><i class="fa-regular fa-heart"></i></button>
+            <button data-aviso="Link do Paçoca copiado"><i class="fa-solid fa-share-nodes"></i></button>
+          </div>
+          <span class="contador-fotos" id="contador-fotos">1/4 fotos</span>
+        </div>
+        <div class="miniaturas-pet">
+          <button class="ativo" data-numero="1"><img src="https://loremflickr.com/800/700/dog?lock=21" alt="Foto 1"></button>
+          <button data-numero="2"><img src="https://loremflickr.com/800/700/dog?lock=22" alt="Foto 2"></button>
+          <button data-numero="3"><img src="https://loremflickr.com/800/700/dog?lock=23" alt="Foto 3"></button>
+          <button data-numero="4"><img src="https://loremflickr.com/800/700/dog?lock=24" alt="Foto 4"></button>
+        </div>
+      </section>
+
+      <section class="pet-info">
+        <div class="caixa">
+          <h1>Paçoca</h1>
+          <p class="local"><i class="fa-solid fa-location-dot"></i> Pinheiros, São Paulo</p>
+          <div class="botoes-pet">
+            <button class="botao-verde" data-aviso="Pedido de adoção do Paçoca iniciado"><i class="fa-solid fa-user-plus"></i> Quero Adotar o Paçoca</button>
+            <button class="botao-lilas" data-aviso="Abrindo conversa com a ONG"><i class="fa-regular fa-message"></i> Conversar com a ONG</button>
+          </div>
+          <div class="resumo-pet">
+            <div>Sexo<strong>Macho</strong></div>
+            <div>Idade<strong>1 ano</strong></div>
+            <div>Porte<strong>Médio</strong></div>
+          </div>
+        </div>
+
+        <div class="caixa">
+          <div class="titulo-icone"><i class="fa-solid fa-shield-halved"></i> Ficha Técnica &amp; Cuidados Médicos <span class="atualizado">Atualizado em jul/2026</span></div>
+          <div class="ficha">
+            <div><i class="fa-solid fa-dna"></i><span>Raça<strong>Caramelo</strong></span></div>
+            <div><i class="fa-solid fa-kit-medical"></i><span>Castração<strong>Castrado</strong></span></div>
+            <div><i class="fa-solid fa-syringe"></i><span>Vacinação<strong>V10 + Antirrábica</strong></span></div>
+            <div><i class="fa-solid fa-pills"></i><span>Vermifugação<strong>Em dia</strong></span></div>
+            <div><i class="fa-solid fa-people-group"></i><span>Sociabilidade<strong>Cães, Gatos e Crianças</strong></span></div>
+            <div><i class="fa-solid fa-house"></i><span>Ambiente Ideal<strong>Apto ou Casa telada</strong></span></div>
+          </div>
+        </div>
+
+        <div class="caixa historia">
+          <div class="titulo-icone"><i class="fa-solid fa-book-open laranja"></i> História do Paçoca</div>
+          <p>Paçoca foi resgatado em uma noite chuvosa próximo à Feirinha da Praça Benedito Calixto. Bastou um pedaço de pão e carinho para ele pular confiante no colo dos voluntários. Desde o primeiro instante, demonstrou uma doçura sem igual: adora cochilar perto dos pés enquanto alguém trabalha, sabe sentar antes das refeições e passeia tranquilamente na guia sem puxar.</p>
+          <p>Procuramos tutores responsáveis que ofereçam um lar seguro, passeios diários cheios de estímulo olfativo e muito cafuné na barriga.</p>
+          <div class="tags">
+            <span><i class="fa-regular fa-moon"></i> Dorminhoco</span>
+            <span><i class="fa-solid fa-crown"></i> Ama Carinho na Barriga</span>
+            <span><i class="fa-solid fa-volume-xmark"></i> Silencioso</span>
+            <span><i class="fa-solid fa-person-walking"></i> Adora Passeios na Guia</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="ong">
+      <img src="https://loremflickr.com/200/200/shelter?lock=51" alt="SOS Patinhas Felizes">
+      <div class="ong-info">
+        <h3>SOS Patinhas Felizes</h3>
+        <span class="selo-claro"><i class="fa-regular fa-circle-check"></i> ONG Verificada</span> CNPJ 34.891.204/0001-82
+        <div><i class="fa-solid fa-location-dot"></i> Sede Acolhedora: Rua dos Pinheiros, 1420 - Pinheiros, São Paulo - SP</div>
+        <div><i class="fa-regular fa-calendar"></i> Visitas presenciais com agendamento: Terça a Domingo, das 10h às 17h</div>
+      </div>
+      <div class="ong-botoes">
+        <button class="botao-claro" data-aviso="Abrindo o perfil da ONG"><i class="fa-regular fa-building"></i> Ver Perfil da ONG</button>
+        <button class="botao-verde" data-aviso="Abrindo a página de doação"><i class="fa-solid fa-hand-holding-heart"></i> Doar para a ONG</button>
+      </div>
+    </section>
+
+    <section class="passos">
+      <p class="rotulo">Passo a passo transparente</p>
+      <h2>Como Funciona a Adoção no Helpet</h2>
+      <p>Um processo acolhedor e seguro planejado para garantir que a união entre tutor e bichinho dure a vida toda.</p>
+      <div class="passos-grade">
+        <article class="passo">
+          <div class="passo-topo"><span class="numero">1</span><span class="tempo">5 min</span></div>
+          <h3>Formulário de Interesse</h3>
+          <p>Preencha dados básicos sobre sua rotina, espaço da residência e histórico com pets para alinhamento inicial com o perfil do Paçoca.</p>
+        </article>
+        <article class="passo">
+          <div class="passo-topo"><span class="numero">2</span><span class="tempo">Ao Vivo</span></div>
+          <h3>Entrevista &amp; Visita</h3>
+          <p>Bate-papo online ou presencial na ONG com os cuidadores e o momento especial de conhecer o Paçoca pessoalmente para sentir a conexão.</p>
+        </article>
+        <article class="passo">
+          <div class="passo-topo"><span class="numero">3</span><span class="tempo">Final</span></div>
+          <h3>Termo de Adoção &amp; Novo Lar</h3>
+          <p>Assinatura digital do termo de responsabilidade, orientações finais de transporte e o início de uma linda amizade para sempre!</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="outros">
+      <div class="outros-topo">
+        <div>
+          <p class="rotulo">Mais vidas para transformar</p>
+          <h2>Conheça outros amiguinhos em São Paulo</h2>
+        </div>
+        <a href="#">Explorar todos os 48 pets <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="outros-grade">
+        <article class="outro-cartao">
+          <div class="pet-foto">
+            <img src="https://loremflickr.com/600/450/dog?lock=61" alt="Pipoca">
+            <span class="pet-tag">Fêmea • 8 meses</span>
+            <button class="favorito"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="outro-corpo">
+            <h3>Pipoca</h3>
+            <p><i class="fa-solid fa-location-dot"></i> Vila Mariana, São Paulo</p>
+            <div class="outro-rodape"><span>Porte Pequeno</span><a href="pet.html">Ver Perfil</a></div>
+          </div>
+        </article>
+        <article class="outro-cartao">
+          <div class="pet-foto">
+            <img src="https://loremflickr.com/600/450/dog?lock=62" alt="Tobias">
+            <span class="pet-tag">Macho • 2 anos</span>
+            <button class="favorito"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="outro-corpo">
+            <h3>Tobias</h3>
+            <p><i class="fa-solid fa-location-dot"></i> Perdizes, São Paulo</p>
+            <div class="outro-rodape"><span>Porte Médio</span><a href="pet.html">Ver Perfil</a></div>
+          </div>
+        </article>
+        <article class="outro-cartao">
+          <div class="pet-foto">
+            <img src="https://loremflickr.com/600/450/dog?lock=63" alt="Belinha">
+            <span class="pet-tag">Fêmea • 3 anos</span>
+            <button class="favorito"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="outro-corpo">
+            <h3>Belinha</h3>
+            <p><i class="fa-solid fa-location-dot"></i> Butantã, São Paulo</p>
+            <div class="outro-rodape"><span>Porte Pequeno</span><a href="pet.html">Ver Perfil</a></div>
+          </div>
+        </article>
+        <article class="outro-cartao">
+          <div class="pet-foto">
+            <img src="https://loremflickr.com/600/450/puppy?lock=64" alt="Nino">
+            <span class="pet-tag">Macho • 6 meses</span>
+            <button class="favorito"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="outro-corpo">
+            <h3>Nino</h3>
+            <p><i class="fa-solid fa-location-dot"></i> Santana, São Paulo</p>
+            <div class="outro-rodape"><span>Filhote</span><a href="pet.html">Ver Perfil</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape-grade">
+        <div>
+          <a class="logo" href="#"><span class="logo-icone"><i class="fa-solid fa-paw"></i></span><span class="logo-texto">Helpet</span></a>
+          <p>Conectando corações, lares e animais resgatados. Apoio contínuo a ONGs com campanhas de adoção responsável e doação solidária de ração e cuidados veterinários.</p>
+        </div>
+        <div>
+          <h4>Adoção &amp; Causa</h4>
+          <ul>
+            <li>Quero Adotar um Cão</li>
+            <li>Quero Adotar um Gato</li>
+            <li>Bancos de Alimentos</li>
+            <li>Cadastrar Resgatado</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Institucional</h4>
+          <ul>
+            <li>Sobre o Helpet</li>
+            <li>Rede de Abrigos</li>
+            <li>Transparência &amp; Metas</li>
+            <li>Carreiras &amp; Voluntariado</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Ajuda &amp; Suporte</h4>
+          <ul>
+            <li>Central de Dúvidas</li>
+            <li>Diretrizes de Adoção</li>
+            <li>Fale Conosco</li>
+            <li>Privacidade &amp; Termos</li>
+          </ul>
+        </div>
+      </div>
+      <div class="rodape-final">
+        <span>© 2026 Helpet Plataforma de Proteção Animal. Todos os direitos reservados.</span>
+        <span>Feito com amor e patinhas acolhidas</span>
+      </div>
+    </div>
+  </footer>
+  <div class="aviso" id="aviso"></div>
+  <script src="script.js"></script>
+</body>
+</html>

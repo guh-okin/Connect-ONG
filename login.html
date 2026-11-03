@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entrar - Helpet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina-auth">
+  <header class="topo-auth">
+    <div class="container">
+      <a class="logo" href="#"><span class="logo-icone"><i class="fa-solid fa-paw"></i></span><span class="logo-texto">Helpet</span></a>
+      <nav class="links-auth">
+        <a href="#">Voltar para Home</a>
+        <a href="#">Suporte</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="auth-caixa">
+      <section class="auth-lado centralizado">
+        <div class="etiquetas-linha">
+          <span class="etiqueta"><i class="fa-solid fa-heart"></i> COMUNIDADE HELPET</span>
+          <span class="etiqueta"><i class="fa-regular fa-circle-check"></i> 100% Auditado</span>
+        </div>
+        <div class="foto-quadrada">
+          <img src="https://loremflickr.com/600/450/dog?lock=32" alt="Cachorro e gato">
+          <span>+12.000 pets</span>
+        </div>
+        <h2>Adoção que transforma. Doação que ajuda.</h2>
+        <p>Conectando corações generosos a abrigos e animais que sonham com um lar acolhedor.</p>
+        <div class="numeros-lado">
+          <div><strong>380+ ONGs</strong>Parcerias ativas no Brasil</div>
+          <div class="direita"><strong>99.4%</strong>Adoções felizes</div>
+        </div>
+      </section>
+
+      <section class="auth-form">
+        <p class="sobre"><strong><i class="fa-regular fa-heart"></i> Que bom te ver de volta!</strong></p>
+        <h1>Acesse sua conta</h1>
+        <p class="subtitulo">Entre para acompanhar seus pets favoritos, histórico de apadrinhamentos e doações.</p>
+
+        <div class="abas">
+          <button type="button" class="ativo"><i class="fa-regular fa-heart"></i> Sou Adotante / Doador</button>
+          <button type="button"><i class="fa-solid fa-house-chimney"></i> Sou ONG / Protetor</button>
+        </div>
+
+        <form id="form-login">
+          <div class="campo">
+            <div class="campo-rotulo"><label for="email">E-mail institucional ou pessoal</label></div>
+            <div class="entrada"><i class="fa-regular fa-envelope"></i><input type="text" id="email" placeholder="exemplo@email.com"></div>
+          </div>
+          <div class="campo">
+            <div class="campo-rotulo"><label for="senha">Senha</label><a href="#">Esqueceu sua senha?</a></div>
+            <div class="entrada"><i class="fa-solid fa-lock"></i><input type="password" id="senha" placeholder="Digite sua senha"><button type="button" class="olho" data-alvo="senha"><i class="fa-regular fa-eye"></i></button></div>
+          </div>
+          <div class="linha-opcoes">
+            <label><input type="checkbox"> Lembrar deste dispositivo</label>
+            <span class="selo-ssl"><i class="fa-solid fa-lock"></i> 256-bit SSL</span>
+          </div>
+          <p class="mensagem-erro" id="erro-form"></p>
+          <button type="submit" class="botao-degrade">Entrar na Helpet <i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+
+        <p class="divisor">OU CONTINUE COM</p>
+        <div class="botoes-sociais dois">
+          <button type="button" class="botao-social" data-aviso="Login com Google em breve"><i class="fa-brands fa-google"></i> Google</button>
+          <button type="button" class="botao-social" data-aviso="Login com Apple em breve"><i class="fa-brands fa-apple"></i> Apple ID</button>
+        </div>
+
+        <p class="troca-conta">Não possui uma conta? <a href="cadastro.html">Cadastre-se gratuitamente</a></p>
+        <p class="nota-seguranca"><i class="fa-solid fa-shield-halved"></i> Ambiente protegido com criptografia de ponta a ponta</p>
+      </section>
+    </div>
+
+    <div class="garantias-auth">
+      <div class="garantia"><i class="fa-solid fa-circle-check"></i><div><strong>ONGs Verificadas</strong>Critério rigoroso</div></div>
+      <div class="garantia"><i class="fa-solid fa-shield-halved"></i><div><strong>Doações Seguras</strong>Transparência total</div></div>
+      <div class="garantia"><i class="fa-solid fa-headset"></i><div><strong>Suporte Humano</strong>Acompanhamento real</div></div>
+      <div class="garantia"><i class="fa-solid fa-paw"></i><div><strong>Pós-Adoção Ativo</strong>Saúde e adaptação</div></div>
+    </div>
+  </main>
+
+  <div class="aviso" id="aviso"></div>
+  <script src="script.js"></script>
+</body>
+</html>

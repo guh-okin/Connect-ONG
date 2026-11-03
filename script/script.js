@@ -1,168 +1,177 @@
-(() => {
-  'use strict';
-
-  const $ = (s, el = document) => el.querySelector(s);
-  const $$ = (s, el = document) => [...el.querySelectorAll(s)];
-
-  /* ---------- Toast ---------- */
-  const toast = $('#toast');
-  let toastTimer;
-  const showToast = (msg) => {
-    toast.textContent = msg;
-    toast.classList.add('is-show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove('is-show'), 2600);
-  };
-
-  /* ---------- Menu mobile ---------- */
-  const header = $('.header');
-  const menuToggle = $('#menuToggle');
-  menuToggle.addEventListener('click', () => {
-    const open = header.classList.toggle('is-open');
-    menuToggle.setAttribute('aria-expanded', open);
-  });
-  $$('.nav a').forEach(a => a.addEventListener('click', () => {
-    header.classList.remove('is-open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-  }));
-
-  /* ---------- Fallback de imagens ---------- */
-  $$('img[data-fallback]').forEach(img => {
-    img.addEventListener('error', () => {
-      const box = img.parentElement;
-      const span = document.createElement('span');
-      span.textContent = img.dataset.fallback;
-      span.style.cssText = 'position:absolute;inset:0;display:grid;place-items:center;font-size:64px';
-      box.style.position = box.style.position || 'relative';
-      img.remove();
-      box.prepend(span);
-    }, { once: true });
-  });
-
-  /* ---------- Pets: filtros ---------- */
-  const cards = $$('.pet');
-  const empty = $('#empty');
-  const state = { tab: 'todos', species: '', size: '', uf: '', query: '' };
-
-  const normalize = (t) => t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-
-  function applyFilters() {
-    let visible = 0;
-    cards.forEach(card => {
-      const types = card.dataset.type.split(' ');
-      const text = normalize(card.textContent);
-      const ok =
-        (state.tab === 'todos' || types.includes(state.tab)) &&
-        (!state.species || types.includes(state.species)) &&
-        (!state.size || card.dataset.size === state.size) &&
-        (!state.uf || card.dataset.uf === state.uf) &&
-        (!state.query || text.includes(normalize(state.query)));
-      card.hidden = !ok;
-      if (ok) visible++;
-    });
-    empty.hidden = visible !== 0;
+function mostrarAviso(texto) {
+  var aviso = document.getElementById("aviso");
+  if (aviso == null) {
+    return;
   }
+  aviso.textContent = texto;
+  aviso.classList.add("visivel");
+  setTimeout(function () {
+    aviso.classList.remove("visivel");
+  }, 2500);
+}
 
-  $$('.tab').forEach(tab => tab.addEventListener('click', () => {
-    $$('.tab').forEach(t => t.classList.remove('is-active'));
-    tab.classList.add('is-active');
-    state.tab = tab.dataset.filter;
-    applyFilters();
-  }));
-
-  $('#finder').addEventListener('submit', (e) => {
-    e.preventDefault();
-    state.species = $('#fSpecies').value;
-    state.size = $('#fSize').value;
-    state.uf = $('#fLoc').value;
-    applyFilters();
-    $('#pets').scrollIntoView({ behavior: 'smooth' });
-    const n = cards.filter(c => !c.hidden).length;
-    showToast(n ? `${n} pet(s) encontrado(s)` : 'Nenhum pet encontrado');
+var botoesAviso = document.querySelectorAll("[data-aviso]");
+for (var a = 0; a < botoesAviso.length; a++) {
+  botoesAviso[a].addEventListener("click", function () {
+    mostrarAviso(this.dataset.aviso);
   });
+}
 
-  const searchInput = $('#searchInput');
-  let searchTimer;
-  searchInput.addEventListener('input', () => {
-    clearTimeout(searchTimer);
-    searchTimer = setTimeout(() => {
-      state.query = searchInput.value.trim();
-      applyFilters();
-    }, 200);
+var formsBusca = document.querySelectorAll(".busca-topo");
+for (var b = 0; b < formsBusca.length; b++) {
+  formsBusca[b].addEventListener("submit", function (evento) {
+    evento.preventDefault();
   });
-  searchInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' && state.query) $('#pets').scrollIntoView({ behavior: 'smooth' });
-  });
+}
 
-  /* ---------- Favoritos ---------- */
-  const favs = new Set();
-  $$('.fav').forEach(btn => btn.addEventListener('click', () => {
-    const name = btn.closest('.pet').querySelector('h3').textContent;
-    const on = btn.classList.toggle('is-on');
-    btn.textContent = on ? '♥' : '♡';
-    btn.setAttribute('aria-pressed', on);
-    on ? favs.add(name) : favs.delete(name);
-    showToast(on ? `${name} adicionado aos favoritos` : `${name} removido dos favoritos`);
-  }));
-
-  /* ---------- Salvar artigos ---------- */
-  $$('.save').forEach(btn => btn.addEventListener('click', () => {
-    const on = btn.classList.toggle('is-on');
-    showToast(on ? 'Artigo salvo para ler depois' : 'Artigo removido dos salvos');
-  }));
-
-  /* ---------- Pacotes de doação ---------- */
-  const packs = $$('.pack');
-  const donateBtn = $('#donateBtn');
-  packs.forEach(p => p.addEventListener('click', () => {
-    packs.forEach(x => x.classList.remove('is-active'));
-    p.classList.add('is-active');
-  }));
-
-  donateBtn.addEventListener('click', () => {
-    const p = $('.pack.is-active');
-    const kg = Number(p.dataset.kg);
-    const price = Number(p.dataset.price);
-    if (!kg) {
-      const v = prompt('Quanto você gostaria de doar? (R$)');
-      const n = parseFloat((v || '').replace(',', '.'));
-      if (!n || n <= 0) return showToast('Informe um valor válido para doar');
-      return showToast(`Obrigado! Doação de R$ ${n.toFixed(2).replace('.', ',')} iniciada 💚`);
+var botoesOlho = document.querySelectorAll(".olho");
+for (var c = 0; c < botoesOlho.length; c++) {
+  botoesOlho[c].addEventListener("click", function () {
+    var campo = document.getElementById(this.dataset.alvo);
+    var icone = this.querySelector("i");
+    if (campo.type == "password") {
+      campo.type = "text";
+      icone.className = "fa-regular fa-eye-slash";
+    } else {
+      campo.type = "password";
+      icone.className = "fa-regular fa-eye";
     }
-    showToast(`Obrigado! Pacote de ${kg} kg (R$ ${price}) iniciado 💚`);
+  });
+}
+
+var botoesAba = document.querySelectorAll(".abas button");
+for (var d = 0; d < botoesAba.length; d++) {
+  botoesAba[d].addEventListener("click", function () {
+    var irmaos = this.parentElement.children;
+    for (var e = 0; e < irmaos.length; e++) {
+      irmaos[e].classList.remove("ativo");
+    }
+    this.classList.add("ativo");
+  });
+}
+
+var botoesFavorito = document.querySelectorAll(".favorito");
+for (var f = 0; f < botoesFavorito.length; f++) {
+  botoesFavorito[f].addEventListener("click", function () {
+    var icone = this.querySelector("i");
+    this.classList.toggle("ativo");
+    if (this.classList.contains("ativo")) {
+      icone.className = "fa-solid fa-heart";
+    } else {
+      icone.className = "fa-regular fa-heart";
+    }
+  });
+}
+
+var formCadastro = document.getElementById("form-cadastro");
+if (formCadastro != null) {
+  var campoSenha = document.getElementById("senha");
+  var textoForca = document.getElementById("texto-forca");
+  var barraForca = document.getElementById("barra-forca");
+  var erroCadastro = document.getElementById("erro-form");
+
+  campoSenha.addEventListener("input", function () {
+    var senha = campoSenha.value;
+    var pontos = 0;
+    if (senha.length >= 8) {
+      pontos = pontos + 1;
+    }
+    if (/[0-9]/.test(senha)) {
+      pontos = pontos + 1;
+    }
+    if (/[A-Z]/.test(senha)) {
+      pontos = pontos + 1;
+    }
+    if (/[^A-Za-z0-9]/.test(senha)) {
+      pontos = pontos + 1;
+    }
+
+    if (senha == "") {
+      textoForca.textContent = "Digite uma senha";
+      barraForca.style.width = "0%";
+    } else if (pontos <= 1) {
+      textoForca.textContent = "Fraca";
+      barraForca.style.width = "30%";
+      barraForca.style.background = "#d32f2f";
+    } else if (pontos <= 3) {
+      textoForca.textContent = "Média";
+      barraForca.style.width = "65%";
+      barraForca.style.background = "#f5a300";
+    } else {
+      textoForca.textContent = "Forte";
+      barraForca.style.width = "100%";
+      barraForca.style.background = "#34c45a";
+    }
   });
 
-  /* ---------- Barra de progresso (anima ao aparecer) ---------- */
-  const fill = $('#progressFill');
-  const reveal = new IntersectionObserver((entries, obs) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        fill.style.width = fill.dataset.value + '%';
-        obs.disconnect();
-      }
-    });
-  }, { threshold: 0.4 });
-  reveal.observe(fill);
+  formCadastro.addEventListener("submit", function (evento) {
+    evento.preventDefault();
+    var nome = document.getElementById("nome").value;
+    var email = document.getElementById("email").value;
+    var senha = campoSenha.value;
+    var confirmar = document.getElementById("confirmar").value;
+    var termos = document.getElementById("termos").checked;
 
-  /* ---------- Contadores do hero ---------- */
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const fmt = new Intl.NumberFormat('pt-BR');
-  if (!reduce) {
-    $$('[data-count]').forEach(el => {
-      const end = Number(el.dataset.count);
-      const suffix = el.dataset.suffix || '';
-      const dur = 1200;
-      const start = performance.now();
-      const tick = (now) => {
-        const t = Math.min((now - start) / dur, 1);
-        const eased = 1 - Math.pow(1 - t, 3);
-        el.textContent = fmt.format(Math.round(end * eased)) + suffix;
-        if (t < 1) requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
+    if (nome == "" || email == "") {
+      erroCadastro.textContent = "Preencha o nome e o e-mail.";
+    } else if (email.indexOf("@") == -1) {
+      erroCadastro.textContent = "Digite um e-mail válido.";
+    } else if (senha.length < 8) {
+      erroCadastro.textContent = "A senha precisa ter no mínimo 8 caracteres.";
+    } else if (senha != confirmar) {
+      erroCadastro.textContent = "As senhas não são iguais.";
+    } else if (termos == false) {
+      erroCadastro.textContent = "Aceite os Termos de Uso para continuar.";
+    } else {
+      erroCadastro.textContent = "";
+      window.location.href = "login.html";
+    }
+  });
+}
+
+var formLogin = document.getElementById("form-login");
+if (formLogin != null) {
+  var erroLogin = document.getElementById("erro-form");
+
+  formLogin.addEventListener("submit", function (evento) {
+    evento.preventDefault();
+    var email = document.getElementById("email").value;
+    var senha = document.getElementById("senha").value;
+
+    if (email == "" || senha == "") {
+      erroLogin.textContent = "Preencha o e-mail e a senha.";
+    } else if (email.indexOf("@") == -1) {
+      erroLogin.textContent = "Digite um e-mail válido.";
+    } else {
+      erroLogin.textContent = "";
+      window.location.href = "perfil.html";
+    }
+  });
+}
+
+var botoesMenuPerfil = document.querySelectorAll(".menu-perfil button");
+for (var g = 0; g < botoesMenuPerfil.length; g++) {
+  botoesMenuPerfil[g].addEventListener("click", function () {
+    for (var h = 0; h < botoesMenuPerfil.length; h++) {
+      botoesMenuPerfil[h].classList.remove("ativo");
+    }
+    this.classList.add("ativo");
+  });
+}
+
+var fotoPrincipal = document.getElementById("foto-principal");
+if (fotoPrincipal != null) {
+  var miniaturas = document.querySelectorAll(".miniaturas-pet button");
+  var contadorFotos = document.getElementById("contador-fotos");
+
+  for (var i = 0; i < miniaturas.length; i++) {
+    miniaturas[i].addEventListener("click", function () {
+      for (var j = 0; j < miniaturas.length; j++) {
+        miniaturas[j].classList.remove("ativo");
+      }
+      this.classList.add("ativo");
+      fotoPrincipal.src = this.querySelector("img").src;
+      contadorFotos.textContent = this.dataset.numero + "/4 fotos";
     });
   }
-
-  /* ---------- Links placeholder ---------- */
-  $$('a[href="#"]').forEach(a => a.addEventListener('click', e => e.preventDefault()));
-})();
+}
