@@ -1,240 +1,312 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Paçoca - Detalhes e Adoção - Helpet</title>
+  <meta name="description" content="Conheça o Paçoca, cachorro caramelo disponível para adoção em Pinheiros, São Paulo.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="estilo/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo/style.css">
+  <link rel="stylesheet" href="estilo/novas-telas.css">
 </head>
-<body>
-  <header class="topo">
-    <div class="container topo-linha">
-      <a class="logo" href="#"><span class="logo-icone"><i class="fa-solid fa-paw"></i></span><span class="logo-texto">Helpet</span></a>
-      <nav class="menu-topo">
-        <a href="#">Início</a>
-        <a href="#">Adotar</a>
-        <a href="#">Doar Alimentos &amp; Ração</a>
-        <a href="#">ONGs Parceiras</a>
+
+<body class="home-page">
+
+<header class="site-header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html" aria-label="Helpet - Página inicial">
+        <img src="img/Logo helpet pequena.png" alt="Helpet">
+      </a>
+
+      <nav class="header__nav" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="catalogo.html" aria-current="page">Adotar</a>
+        <a href="doacao.html">Doar Alimentos e Ração</a>
+        <a href="index.html#ongs">ONGs Parceiras</a>
       </nav>
-      <form class="busca-topo">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="Buscar cães, gatos ou abrigos...">
+
+      <form class="header__search" role="search" action="#">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.3-4.3"></path>
+        </svg>
+        <label class="visually-hidden" for="busca-header">Buscar cães, gatos ou abrigos</label>
+        <input id="busca-header" type="search" name="q" placeholder="Buscar cães, gatos ou abrigos...">
       </form>
-      <div class="topo-direita">
-        <button class="botao-cadastrar-pet" data-aviso="O cadastro de pets estará disponível em breve"><i class="fa-solid fa-circle-plus"></i> <span>Cadastrar Pet</span></button>
-        <button class="sino" data-aviso="Você não tem novas notificações"><i class="fa-regular fa-bell"></i></button>
-        <a class="usuario-topo" href="perfil.html">
-          <span class="avatar-icone"><i class="fa-regular fa-user"></i></span>
-          <span><strong>Mariana Alencar</strong>Tutor Protetor</span>
+
+      <div class="header__actions">
+        <a class="home-btn home-btn--register" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M8 12h8"></path>
+            <path d="M12 8v8"></path>
+          </svg>
+          Cadastrar Pet
+        </a>
+
+        <a class="header__icon-button" href="#" aria-label="Notificações">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+            <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
+          </svg>
+          <span class="notification-dot"></span>
+        </a>
+
+        <a class="header__profile" href="perfil.html">
+          <span class="profile__avatar">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </span>
+          <span class="profile__text">
+            <strong>Mariana Alencar</strong>
+            <small>Tutor Protetor</small>
+          </span>
         </a>
       </div>
     </div>
   </header>
+  <main>
+    <div class="container pet-page">
+      <div class="pet-layout">
+        <section class="gallery" aria-label="Fotos do Paçoca">
+          <div class="gallery__main">
+            <img id="foto-principal" src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=900&q=80" alt="Paçoca, cachorro caramelo sentado">
+            <span class="gallery__status">Disponível para Adoção</span>
+            <div class="gallery__actions">
+              <button class="round-button" type="button" data-favorito aria-pressed="false" aria-label="Favoritar Paçoca"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"></path></svg></button>
+              <button class="round-button" type="button" data-toast="Link do Paçoca copiado" aria-label="Compartilhar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.59 13.51 6.83 3.98"></path><path d="m15.41 6.51-6.82 3.98"></path></svg></button>
+            </div>
+            <span class="gallery__count" id="contador-fotos">1/4 fotos</span>
+          </div>
+          <div class="gallery__thumbs">
+          <button class="gallery__thumb is-active" type="button" data-foto="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=900&q=80" data-numero="1" aria-label="Ver foto 1">
+            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=300&q=80" alt="Foto 1 do Paçoca" loading="lazy">
+          </button>
+          <button class="gallery__thumb" type="button" data-foto="https://st2.depositphotos.com/3232723/7159/i/450/depositphotos_71590537-stock-photo-happy-merle-border-collie-in.jpg" data-numero="2" aria-label="Ver foto 2">
+            <img src="https://st2.depositphotos.com/3232723/7159/i/450/depositphotos_71590537-stock-photo-happy-merle-border-collie-in.jpg" alt="Foto 2 do Paçoca" loading="lazy">
+          </button>
+          </div>
+        </section>
 
-  <main class="container">
-    <div class="pet-layout">
-      <section>
-        <div class="galeria-principal">
-          <img id="foto-principal" src="https://loremflickr.com/800/700/dog?lock=21" alt="Paçoca">
-          <span class="selo-disponivel">Disponível para Adoção</span>
-          <div class="botoes-galeria">
-            <button class="favorito"><i class="fa-regular fa-heart"></i></button>
-            <button data-aviso="Link do Paçoca copiado"><i class="fa-solid fa-share-nodes"></i></button>
-          </div>
-          <span class="contador-fotos" id="contador-fotos">1/4 fotos</span>
-        </div>
-        <div class="miniaturas-pet">
-          <button class="ativo" data-numero="1"><img src="https://loremflickr.com/800/700/dog?lock=21" alt="Foto 1"></button>
-          <button data-numero="2"><img src="https://loremflickr.com/800/700/dog?lock=22" alt="Foto 2"></button>
-          <button data-numero="3"><img src="https://loremflickr.com/800/700/dog?lock=23" alt="Foto 3"></button>
-          <button data-numero="4"><img src="https://loremflickr.com/800/700/dog?lock=24" alt="Foto 4"></button>
-        </div>
-      </section>
+        <div class="pet-info">
+          <article class="panel pet-hero">
+            <h1>Paçoca</h1>
+            <p class="pet-hero__place"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Pinheiros, São Paulo</p>
+            <div class="pet-hero__actions">
+              <button class="home-btn home-btn--dark" type="button" data-toast="Pedido de adoção do Paçoca iniciado"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M19 8v6"></path><path d="M22 11h-6"></path></svg> Quero Adotar o Paçoca</button>
+              <button class="home-btn home-btn--lilac" type="button" data-toast="Abrindo conversa com a ONG"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg> Conversar com a ONG</button>
+            </div>
+            <div class="pet-facts">
+              <div class="pet-fact"><small>Sexo</small><strong>Macho</strong></div>
+              <div class="pet-fact"><small>Idade</small><strong>1 ano</strong></div>
+              <div class="pet-fact"><small>Porte</small><strong>Médio</strong></div>
+            </div>
+          </article>
 
-      <section class="pet-info">
-        <div class="caixa">
-          <h1>Paçoca</h1>
-          <p class="local"><i class="fa-solid fa-location-dot"></i> Pinheiros, São Paulo</p>
-          <div class="botoes-pet">
-            <button class="botao-verde" data-aviso="Pedido de adoção do Paçoca iniciado"><i class="fa-solid fa-user-plus"></i> Quero Adotar o Paçoca</button>
-            <button class="botao-lilas" data-aviso="Abrindo conversa com a ONG"><i class="fa-regular fa-message"></i> Conversar com a ONG</button>
-          </div>
-          <div class="resumo-pet">
-            <div>Sexo<strong>Macho</strong></div>
-            <div>Idade<strong>1 ano</strong></div>
-            <div>Porte<strong>Médio</strong></div>
-          </div>
-        </div>
+          <article class="panel">
+            <h2 class="panel__title"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg> Ficha Técnica &amp; Cuidados Médicos <span class="tag-mint">Atualizado em jul/2026</span></h2>
+            <div class="sheet">
+            <div class="sheet__item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 15c6.67-6 13.33 0 20-6"></path><path d="M9 22c1.8-2 2.52-4 2.81-5.99"></path><path d="M15 2c-1.8 2-2.52 4-2.81 5.99"></path><path d="m17 6-2.5-2.5"></path><path d="m14 8-1-1"></path><path d="m7 18 2.5 2.5"></path><path d="m20 9 .5.5"></path><path d="m10 16 1.5 1.5"></path></svg><div><small>Raça</small><strong>Caramelo</strong></div></div>
+            <div class="sheet__item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M20 4 8.12 15.88"></path><path d="M14.47 14.48 20 20"></path><path d="M8.12 8.12 12 12"></path></svg><div><small>Castração</small><strong>Castrado</strong></div></div>
+            <div class="sheet__item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 2 4 4"></path><path d="m17 7 3-3"></path><path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-.9-1-2.4 0-3.4L15 5"></path><path d="m9 11 4 4"></path><path d="m5 19-3 3"></path><path d="m14 4 6 6"></path></svg><div><small>Vacinação</small><strong>V10 + Antirrábica</strong></div></div>
+            <div class="sheet__item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"></path><path d="m8.5 8.5 7 7"></path></svg><div><small>Vermifugação</small><strong>Em dia</strong></div></div>
+            <div class="sheet__item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><div><small>Sociabilidade</small><strong>Cães, Gatos e Crianças</strong></div></div>
+            <div class="sheet__item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><path d="M9 22V12h6v10"></path></svg><div><small>Ambiente Ideal</small><strong>Apto ou Casa telada</strong></div></div>
+            </div>
+          </article>
 
-        <div class="caixa">
-          <div class="titulo-icone"><i class="fa-solid fa-shield-halved"></i> Ficha Técnica &amp; Cuidados Médicos <span class="atualizado">Atualizado em jul/2026</span></div>
-          <div class="ficha">
-            <div><i class="fa-solid fa-dna"></i><span>Raça<strong>Caramelo</strong></span></div>
-            <div><i class="fa-solid fa-kit-medical"></i><span>Castração<strong>Castrado</strong></span></div>
-            <div><i class="fa-solid fa-syringe"></i><span>Vacinação<strong>V10 + Antirrábica</strong></span></div>
-            <div><i class="fa-solid fa-pills"></i><span>Vermifugação<strong>Em dia</strong></span></div>
-            <div><i class="fa-solid fa-people-group"></i><span>Sociabilidade<strong>Cães, Gatos e Crianças</strong></span></div>
-            <div><i class="fa-solid fa-house"></i><span>Ambiente Ideal<strong>Apto ou Casa telada</strong></span></div>
-          </div>
+          <article class="panel story">
+            <h2 class="panel__title"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="is-orange"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg> História do Paçoca</h2>
+            <p>Paçoca foi resgatado em uma noite chuvosa próximo à Feirinha da Praça Benedito Calixto. Bastou um pedaço de pão e carinho para ele pular confiante no colo dos voluntários. Desde o primeiro instante, demonstrou uma doçura sem igual: adora cochilar perto dos pés enquanto alguém trabalha, sabe sentar antes das refeições e passeia tranquilamente na guia sem puxar.</p>
+            <p>Procuramos tutores responsáveis que ofereçam um lar seguro, passeios diários cheios de estímulo olfativo e muito cafuné na barriga.</p>
+            <ul class="tags">
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg> Dorminhoco</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"></path></svg> Ama Carinho na Barriga</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"></path><path d="m22 9-6 6"></path><path d="m16 9 6 6"></path></svg> Silencioso</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="4.5" cy="10.5" r="1.8"></circle><circle cx="9" cy="5.5" r="1.8"></circle><circle cx="15" cy="5.5" r="1.8"></circle><circle cx="19.5" cy="10.5" r="1.8"></circle><path d="M12 11c-3 0-6 3.5-6 6.2 0 1.6 1.2 2.3 2.7 2.3 1.2 0 2.1-.5 3.3-.5s2.1.5 3.3.5c1.5 0 2.7-.7 2.7-2.3C18 14.5 15 11 12 11z"></path></svg> Adora Passeios na Guia</li>
+            </ul>
+          </article>
         </div>
+      </div>
 
-        <div class="caixa historia">
-          <div class="titulo-icone"><i class="fa-solid fa-book-open laranja"></i> História do Paçoca</div>
-          <p>Paçoca foi resgatado em uma noite chuvosa próximo à Feirinha da Praça Benedito Calixto. Bastou um pedaço de pão e carinho para ele pular confiante no colo dos voluntários. Desde o primeiro instante, demonstrou uma doçura sem igual: adora cochilar perto dos pés enquanto alguém trabalha, sabe sentar antes das refeições e passeia tranquilamente na guia sem puxar.</p>
-          <p>Procuramos tutores responsáveis que ofereçam um lar seguro, passeios diários cheios de estímulo olfativo e muito cafuné na barriga.</p>
-          <div class="tags">
-            <span><i class="fa-regular fa-moon"></i> Dorminhoco</span>
-            <span><i class="fa-solid fa-crown"></i> Ama Carinho na Barriga</span>
-            <span><i class="fa-solid fa-volume-xmark"></i> Silencioso</span>
-            <span><i class="fa-solid fa-person-walking"></i> Adora Passeios na Guia</span>
-          </div>
+      <section class="shelter" aria-label="ONG responsável">
+        <span class="shelter__logo"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg></span>
+        <div class="shelter__info">
+          <h2>SOS Patinhas Felizes</h2>
+          <span class="tag-mint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg> ONG Verificada</span>
+          <small>CNPJ 34.891.204/0001-82</small>
+          <p><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Sede Acolhedora: Rua dos Pinheiros, 1420 - Pinheiros, São Paulo - SP</p>
+          <p><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4"></path><path d="M8 2v4"></path><path d="M3 10h18"></path></svg> Visitas presenciais com agendamento: Terça a Domingo, das 10h às 17h</p>
+        </div>
+        <div class="shelter__actions">
+          <button class="home-btn home-btn--soft" type="button" data-toast="Abrindo o perfil da ONG"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg> Ver Perfil da ONG</button>
+          <a class="home-btn home-btn--dark" href="doacao.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"></path><path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"></path><path d="m2 15 6 6"></path><path d="M19.5 8.5c.7-.7 1.5-1.6 1.5-2.7A2.73 2.73 0 0 0 16 4a2.78 2.78 0 0 0-5 1.8c0 1.2.8 2 1.5 2.8L16 12Z"></path></svg> Doar para a ONG</a>
         </div>
       </section>
     </div>
 
-    <section class="ong">
-      <img src="https://loremflickr.com/200/200/shelter?lock=51" alt="SOS Patinhas Felizes">
-      <div class="ong-info">
-        <h3>SOS Patinhas Felizes</h3>
-        <span class="selo-claro"><i class="fa-regular fa-circle-check"></i> ONG Verificada</span> CNPJ 34.891.204/0001-82
-        <div><i class="fa-solid fa-location-dot"></i> Sede Acolhedora: Rua dos Pinheiros, 1420 - Pinheiros, São Paulo - SP</div>
-        <div><i class="fa-regular fa-calendar"></i> Visitas presenciais com agendamento: Terça a Domingo, das 10h às 17h</div>
-      </div>
-      <div class="ong-botoes">
-        <button class="botao-claro" data-aviso="Abrindo o perfil da ONG"><i class="fa-regular fa-building"></i> Ver Perfil da ONG</button>
-        <button class="botao-verde" data-aviso="Abrindo a página de doação"><i class="fa-solid fa-hand-holding-heart"></i> Doar para a ONG</button>
-      </div>
-    </section>
-
-    <section class="passos">
-      <p class="rotulo">Passo a passo transparente</p>
-      <h2>Como Funciona a Adoção no Helpet</h2>
-      <p>Um processo acolhedor e seguro planejado para garantir que a união entre tutor e bichinho dure a vida toda.</p>
-      <div class="passos-grade">
-        <article class="passo">
-          <div class="passo-topo"><span class="numero">1</span><span class="tempo">5 min</span></div>
-          <h3>Formulário de Interesse</h3>
-          <p>Preencha dados básicos sobre sua rotina, espaço da residência e histórico com pets para alinhamento inicial com o perfil do Paçoca.</p>
-        </article>
-        <article class="passo">
-          <div class="passo-topo"><span class="numero">2</span><span class="tempo">Ao Vivo</span></div>
-          <h3>Entrevista &amp; Visita</h3>
-          <p>Bate-papo online ou presencial na ONG com os cuidadores e o momento especial de conhecer o Paçoca pessoalmente para sentir a conexão.</p>
-        </article>
-        <article class="passo">
-          <div class="passo-topo"><span class="numero">3</span><span class="tempo">Final</span></div>
-          <h3>Termo de Adoção &amp; Novo Lar</h3>
-          <p>Assinatura digital do termo de responsabilidade, orientações finais de transporte e o início de uma linda amizade para sempre!</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="outros">
-      <div class="outros-topo">
-        <div>
-          <p class="rotulo">Mais vidas para transformar</p>
-          <h2>Conheça outros amiguinhos em São Paulo</h2>
+    <section class="how-it-works" aria-labelledby="passos-titulo">
+      <div class="container">
+        <div class="section-heading section-heading--center">
+          <span class="section-tag">Passo a passo transparente</span>
+          <h2 id="passos-titulo">Como Funciona a Adoção no Helpet</h2>
+          <p>Um processo acolhedor e seguro planejado para garantir que a união entre tutor e bichinho dure a vida toda.</p>
         </div>
-        <a href="#">Explorar todos os 48 pets <i class="fa-solid fa-arrow-right"></i></a>
+        <div class="steps-grid">
+          <article class="step-card">
+            <div class="step-card__top">
+              <span class="step-card__icon step-card__icon--number step-card__icon--mint">1</span>
+              <span class="step-card__time">5 min</span>
+            </div>
+            <h3>Formulário de Interesse</h3>
+            <p>Preencha dados básicos sobre sua rotina, espaço da residência e histórico com pets para alinhamento inicial com o perfil do Paçoca.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-card__top">
+              <span class="step-card__icon step-card__icon--number step-card__icon--blue">2</span>
+              <span class="step-card__time">Ao Vivo</span>
+            </div>
+            <h3>Entrevista &amp; Visita</h3>
+            <p>Bate-papo online ou presencial na ONG com os cuidadores e o momento especial de conhecer o Paçoca pessoalmente para sentir a conexão.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-card__top">
+              <span class="step-card__icon step-card__icon--number step-card__icon--orange">3</span>
+              <span class="step-card__time">Final</span>
+            </div>
+            <h3>Termo de Adoção &amp; Novo Lar</h3>
+            <p>Assinatura digital do termo de responsabilidade, orientações finais de transporte e o início de uma linda amizade para sempre!</p>
+          </article>
+        </div>
       </div>
-      <div class="outros-grade">
-        <article class="outro-cartao">
-          <div class="pet-foto">
-            <img src="https://loremflickr.com/600/450/dog?lock=61" alt="Pipoca">
-            <span class="pet-tag">Fêmea • 8 meses</span>
-            <button class="favorito"><i class="fa-regular fa-heart"></i></button>
+    </section>
+
+    <section class="pets-section" aria-labelledby="outros-titulo">
+      <div class="container">
+        <div class="section-heading section-heading--row">
+          <div>
+            <p class="eyebrow">MAIS VIDAS PARA TRANSFORMAR</p>
+            <h2 id="outros-titulo">Conheça outros amiguinhos em São Paulo</h2>
           </div>
-          <div class="outro-corpo">
-            <h3>Pipoca</h3>
-            <p><i class="fa-solid fa-location-dot"></i> Vila Mariana, São Paulo</p>
-            <div class="outro-rodape"><span>Porte Pequeno</span><a href="pet.html">Ver Perfil</a></div>
-          </div>
-        </article>
-        <article class="outro-cartao">
-          <div class="pet-foto">
-            <img src="https://loremflickr.com/600/450/dog?lock=62" alt="Tobias">
-            <span class="pet-tag">Macho • 2 anos</span>
-            <button class="favorito"><i class="fa-regular fa-heart"></i></button>
-          </div>
-          <div class="outro-corpo">
-            <h3>Tobias</h3>
-            <p><i class="fa-solid fa-location-dot"></i> Perdizes, São Paulo</p>
-            <div class="outro-rodape"><span>Porte Médio</span><a href="pet.html">Ver Perfil</a></div>
-          </div>
-        </article>
-        <article class="outro-cartao">
-          <div class="pet-foto">
-            <img src="https://loremflickr.com/600/450/dog?lock=63" alt="Belinha">
-            <span class="pet-tag">Fêmea • 3 anos</span>
-            <button class="favorito"><i class="fa-regular fa-heart"></i></button>
-          </div>
-          <div class="outro-corpo">
-            <h3>Belinha</h3>
-            <p><i class="fa-solid fa-location-dot"></i> Butantã, São Paulo</p>
-            <div class="outro-rodape"><span>Porte Pequeno</span><a href="pet.html">Ver Perfil</a></div>
-          </div>
-        </article>
-        <article class="outro-cartao">
-          <div class="pet-foto">
-            <img src="https://loremflickr.com/600/450/puppy?lock=64" alt="Nino">
-            <span class="pet-tag">Macho • 6 meses</span>
-            <button class="favorito"><i class="fa-regular fa-heart"></i></button>
-          </div>
-          <div class="outro-corpo">
-            <h3>Nino</h3>
-            <p><i class="fa-solid fa-location-dot"></i> Santana, São Paulo</p>
-            <div class="outro-rodape"><span>Filhote</span><a href="pet.html">Ver Perfil</a></div>
-          </div>
-        </article>
+          <a href="catalogo.html">Explorar todos os 48 pets <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+        </div>
+        <div class="pets-grid">
+          <article class="pet-card">
+            <div class="pet-card__image">
+              <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?auto=format&fit=crop&w=600&q=80" alt="Cadela branca de pelo macio" loading="lazy">
+              <span class="pet-card__badge">Fêmea &bull; 8 meses</span>
+              <button class="pet-card__favorite" type="button" data-favorito aria-pressed="false" aria-label="Favoritar Pipoca"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"></path></svg></button>
+            </div>
+            <div class="pet-card__content">
+              <div class="pet-card__title"><h3>Pipoca</h3></div>
+              <p class="pet-card__location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Vila Mariana, São Paulo</p>
+              <div class="pet-card__footer"><span class="pet-card__chip">Porte Pequeno</span><a href="pet.html">Ver Perfil</a></div>
+            </div>
+          </article>
+          <article class="pet-card">
+            <div class="pet-card__image">
+              <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=600&q=80" alt="Cachorro preto e caramelo sentado na grama" loading="lazy">
+              <span class="pet-card__badge">Macho &bull; 2 anos</span>
+              <button class="pet-card__favorite" type="button" data-favorito aria-pressed="false" aria-label="Favoritar Tobias"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"></path></svg></button>
+            </div>
+            <div class="pet-card__content">
+              <div class="pet-card__title"><h3>Tobias</h3></div>
+              <p class="pet-card__location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Perdizes, São Paulo</p>
+              <div class="pet-card__footer"><span class="pet-card__chip">Porte Médio</span><a href="pet.html">Ver Perfil</a></div>
+            </div>
+          </article>
+          <article class="pet-card">
+            <div class="pet-card__image">
+              <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=600&q=80" alt="Cadela dourada olhando para a câmera" loading="lazy">
+              <span class="pet-card__badge">Fêmea &bull; 3 anos</span>
+              <button class="pet-card__favorite" type="button" data-favorito aria-pressed="false" aria-label="Favoritar Belinha"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"></path></svg></button>
+            </div>
+            <div class="pet-card__content">
+              <div class="pet-card__title"><h3>Belinha</h3></div>
+              <p class="pet-card__location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Butantã, São Paulo</p>
+              <div class="pet-card__footer"><span class="pet-card__chip">Porte Pequeno</span><a href="pet.html">Ver Perfil</a></div>
+            </div>
+          </article>
+          <article class="pet-card">
+            <div class="pet-card__image">
+              <img src="https://images.unsplash.com/photo-1612774412771-005ed8e861d2?auto=format&fit=crop&w=600&q=80" alt="Filhote brincando ao ar livre" loading="lazy">
+              <span class="pet-card__badge">Macho &bull; 6 meses</span>
+              <button class="pet-card__favorite" type="button" data-favorito aria-pressed="false" aria-label="Favoritar Nino"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"></path></svg></button>
+            </div>
+            <div class="pet-card__content">
+              <div class="pet-card__title"><h3>Nino</h3></div>
+              <p class="pet-card__location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Santana, São Paulo</p>
+              <div class="pet-card__footer"><span class="pet-card__chip">Filhote</span><a href="pet.html">Ver Perfil</a></div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="rodape">
+  <footer class="site-footer">
     <div class="container">
-      <div class="rodape-grade">
-        <div>
-          <a class="logo" href="#"><span class="logo-icone"><i class="fa-solid fa-paw"></i></span><span class="logo-texto">Helpet</span></a>
+      <div class="footer__main">
+        <div class="footer__brand">
+          <a class="footer__logo" href="index.html" aria-label="Helpet - Página inicial">
+            <img src="img/Logo helpet pequena.png" alt="Helpet">
+          </a>
           <p>Conectando corações, lares e animais resgatados. Apoio contínuo a ONGs com campanhas de adoção responsável e doação solidária de ração e cuidados veterinários.</p>
         </div>
-        <div>
-          <h4>Adoção &amp; Causa</h4>
-          <ul>
-            <li>Quero Adotar um Cão</li>
-            <li>Quero Adotar um Gato</li>
-            <li>Bancos de Alimentos</li>
-            <li>Cadastrar Resgatado</li>
-          </ul>
-        </div>
-        <div>
-          <h4>Institucional</h4>
-          <ul>
-            <li>Sobre o Helpet</li>
-            <li>Rede de Abrigos</li>
-            <li>Transparência &amp; Metas</li>
-            <li>Carreiras &amp; Voluntariado</li>
-          </ul>
-        </div>
-        <div>
-          <h4>Ajuda &amp; Suporte</h4>
-          <ul>
-            <li>Central de Dúvidas</li>
-            <li>Diretrizes de Adoção</li>
-            <li>Fale Conosco</li>
-            <li>Privacidade &amp; Termos</li>
-          </ul>
-        </div>
+
+        <nav class="footer__column" aria-label="Adoção e Causa">
+          <h3>Adoção &amp; Causa</h3>
+          <a href="catalogo.html">Quero Adotar um Cão</a>
+          <a href="catalogo.html">Quero Adotar um Gato</a>
+          <a href="doacao.html">Bancos de Alimentos</a>
+          <a href="#">Cadastrar Resgatado</a>
+        </nav>
+
+        <nav class="footer__column" aria-label="Institucional">
+          <h3>Institucional</h3>
+          <a href="#">Sobre o Helpet</a>
+          <a href="index.html#ongs">Rede de Abrigos</a>
+          <a href="#">Transparência &amp; Metas</a>
+          <a href="#">Carreiras &amp; Voluntariado</a>
+        </nav>
+
+        <nav class="footer__column" aria-label="Ajuda e Suporte">
+          <h3>Ajuda &amp; Suporte</h3>
+          <a href="#">Central de Dúvidas</a>
+          <a href="#">Diretrizes de Adoção</a>
+          <a href="#">Fale Conosco</a>
+          <a href="#">Privacidade &amp; Termos</a>
+        </nav>
       </div>
-      <div class="rodape-final">
-        <span>© 2026 Helpet Plataforma de Proteção Animal. Todos os direitos reservados.</span>
-        <span>Feito com amor e patinhas acolhidas</span>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 Helpet Plataforma de Proteção Animal. Todos os direitos reservados.</p>
+        <a href="#">
+          Feito com amor e patinhas acolhidas
+          <span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="4.5" cy="10.5" r="1.8"></circle>
+              <circle cx="9" cy="5.5" r="1.8"></circle>
+              <circle cx="15" cy="5.5" r="1.8"></circle>
+              <circle cx="19.5" cy="10.5" r="1.8"></circle>
+              <path d="M12 11c-3 0-6 3.5-6 6.2 0 1.6 1.2 2.3 2.7 2.3 1.2 0 2.1-.5 3.3-.5s2.1.5 3.3.5c1.5 0 2.7-.7 2.7-2.3C18 14.5 15 11 12 11z"></path>
+            </svg>
+          </span>
+        </a>
       </div>
     </div>
   </footer>
-  <div class="aviso" id="aviso"></div>
-  <script src="script.js"></script>
+
+  <div class="hp-toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script/script.js"></script>
 </body>
+
 </html>
