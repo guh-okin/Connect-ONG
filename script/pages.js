@@ -6,7 +6,7 @@
   const norm = (t) => String(t).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   const brl = (n) => n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
-  /* =========== Comum: toast, menu, fallback de imagem, busca do topo =========== */
+  /* Comum: toast, menu, fallback de imagem, busca do topo */
   const toast = $('#toast');
   let toastTimer;
   const showToast = (msg) => {
@@ -41,9 +41,7 @@
 
   const topSearch = $('#searchInput');
 
-  /* =========================================================
-     CATÁLOGO
-     ========================================================= */
+  /* CATÁLOGO */
   const grid = $('#grid');
   if (grid) {
     const U = (id) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=600&q=80`;
@@ -239,9 +237,7 @@
     apply();
   }
 
-  /* =========================================================
-     DOAÇÃO
-     ========================================================= */
+  /* DOAÇÃO */
   const itemsEl = $('#items');
   if (itemsEl) {
     // Enter na busca do topo leva ao catálogo
@@ -256,7 +252,7 @@
     }, { threshold: 0.3 }).observe(goalFill);
 
     /* carrinho */
-    const cart = new Map(); // chave -> { label, price, qty }
+    const cart = new Map();
     const feeEl = $('#fee');
     const totalEl = $('#total');
     let mode = 'coleta';
