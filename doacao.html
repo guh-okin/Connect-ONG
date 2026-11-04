@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Doar Alimentos e Ração - Campanha Tigela Cheia - Helpet</title>
+  <meta name="description" content="Doe ração, sachês, medicamentos e cobertores para mais de 40 abrigos cadastrados. Transparência total e certificado digital de doador.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo/style.css">
+  <link rel="stylesheet" href="estilo/doacao.css">
+</head>
+
+<body class="home-page doacao-page">
+
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html" aria-label="Helpet - Página inicial">
+        <img src="img/Logo helpet pequena.png" alt="Helpet">
+      </a>
+
+      <nav class="header__nav" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="catalogo.html">Adotar</a>
+        <a href="doacao.html" aria-current="page">Doar Alimentos e Ração</a>
+        <a href="index.html#ongs">ONGs Parceiras</a>
+      </nav>
+
+      <form class="header__search" role="search" action="catalogo.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.3-4.3"></path>
+        </svg>
+        <label class="visually-hidden" for="busca-header">Buscar cães, gatos ou abrigos</label>
+        <input id="busca-header" type="search" name="q" placeholder="Buscar cães, gatos ou abrigos...">
+      </form>
+
+      <div class="header__actions">
+        <a class="home-btn home-btn--register" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M8 12h8"></path>
+            <path d="M12 8v8"></path>
+          </svg>
+          Cadastrar Pet
+        </a>
+
+        <a class="header__icon-button" href="#" aria-label="Notificações">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+            <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
+          </svg>
+          <span class="notification-dot"></span>
+        </a>
+
+        <a class="header__profile" href="perfil.html">
+          <span class="profile__avatar">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </span>
+          <span class="profile__text">
+            <strong>Mariana Alencar</strong>
+            <small>Tutor Protetor</small>
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== Hero ===== -->
+    <section class="dn-don-hero" aria-labelledby="titulo-doacao">
+      <div class="dn-don-wrap">
+        <div class="don-hero__top">
+          <div class="dn-don-tabs" role="tablist" aria-label="Tipo de ajuda">
+            <button type="button" class="dn-don-tab is-selected" role="tab" aria-selected="true" id="aba-doar">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"></path><path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.100 0 2.100-.4 2.800-1.200l4.600-4.400a2 2 0 0 0-2.750-2.910l-4.200 3.900"></path><path d="m2 16 6 6"></path><circle cx="16" cy="9" r="2.900"></circle><circle cx="6" cy="5" r="3"></circle></svg>
+              Doar Alimentos &amp; Itens
+            </button>
+            <button type="button" class="dn-don-tab" role="tab" aria-selected="false" id="aba-resgate">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="4.500" cy="10.500" r="1.800"></circle><circle cx="9" cy="5.500" r="1.800"></circle><circle cx="15" cy="5.500" r="1.800"></circle><circle cx="19.500" cy="10.500" r="1.800"></circle><path d="M12 11c-3 0-6 3.500-6 6.200 0 1.600 1.200 2.300 2.700 2.300 1.200 0 2.100-.5 3.300-.5s2.100.5 3.300.5c1.500 0 2.700-.7 2.700-2.300C18 14.500 15 11 12 11z"></path></svg>
+              Cadastrar Animal p/ Resgate
+            </button>
+          </div>
+          <p class="don-live"><span class="don-live__dot" aria-hidden="true"></span><strong>42 abrigos</strong> atendidos esta semana em todo o Brasil</p>
+        </div>
+
+        <div class="don-hero__body">
+          <div>
+            <h1 id="titulo-doacao">Campanha Tigela Cheia:<br><span>Doação de Alimentos e Cuidados</span></h1>
+            <p>Conectamos sua generosidade diretamente a mais de 40 abrigos cadastrados com estoques críticos. Ração de qualidade, insumos veterinários e dignidade em cada comedouro.</p>
+          </div>
+          <div class="don-hero__proof">
+            <div class="dn-avatars" aria-hidden="true"><span>AF</span><span>GP</span><span>VL</span></div>
+            <p><strong>+18.420 kg</strong><small>Entregues com nota e fotos</small></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="dn-don-wrap don-content">
+
+      <!-- ===== Simulador ===== -->
+      <section class="dn-sim card" aria-labelledby="titulo-sim">
+        <div class="sim__main">
+          <h2 class="sim__title" id="titulo-sim">
+            <span class="sim__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"></rect><path d="M8 6h8"></path><path d="M8 10h.01"></path><path d="M12 10h.01"></path><path d="M16 10h.01"></path><path d="M8 14h.01"></path><path d="M12 14h.01"></path><path d="M16 14h.01"></path><path d="M8 18h8"></path></svg></span>
+            Simulador de Impacto Direto
+          </h2>
+          <p class="dn-sim__label" id="sim-label">Selecione a quantidade de ração:</p>
+          <div class="sim__options" role="radiogroup" aria-labelledby="sim-label" id="sim-options">
+            <button type="button" class="sim-opt" role="radio" aria-checked="false" data-kg="5" data-preco="48"><strong>5 kg</strong><span>R$ 48</span></button>
+            <button type="button" class="sim-opt is-selected" role="radio" aria-checked="true" data-kg="15" data-preco="124"><strong>15 kg</strong><span>R$ 124</span></button>
+            <button type="button" class="sim-opt" role="radio" aria-checked="false" data-kg="30" data-preco="230"><strong>30 kg</strong><span>R$ 230</span></button>
+            <button type="button" class="sim-opt" role="radio" aria-checked="false" data-kg="60" data-preco="440"><strong>60 kg</strong><span>R$ 440</span></button>
+          </div>
+          <div class="sim__impact" aria-live="polite">
+            <span class="sim__smile" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.500 2 4 2 4-2 4-2"></path><path d="M9 9h.01"></path><path d="M15 9h.01"></path></svg></span>
+            <div>
+              <small>Transformação real</small>
+              <strong id="sim-titulo">15 kg de ração alimentam 3 cães resgatados por 2 semanas inteiras.</strong>
+              <p>Garante energia calórica balanceada, pelagem fortalecida e imunidade restabelecida.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sim__goal">
+          <div class="goal__head">
+            <h3>Meta Solidária de Outubro</h3>
+            <span class="goal__pct" id="meta-pct">78% Atingida</span>
+          </div>
+          <div class="dn-goal__bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="78" aria-label="Meta solidária de outubro">
+            <span id="meta-barra" style="width:0"></span>
+          </div>
+          <div class="goal__foot">
+            <span>Arrecadados: <strong id="meta-atual">11.700 kg</strong></span>
+            <span>Meta: <strong>15.000 kg</strong></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Produtos ===== -->
+      <section class="products" aria-labelledby="titulo-produtos">
+        <h2 class="section-title" id="titulo-produtos">Escolha o que Doar</h2>
+        <ul class="products__grid">
+
+          <li class="product card" data-produto="racao" data-tema="green">
+            <div class="product__media"><img src="img/cachorro e tigela.jpg" alt="Cachorro deitado ao lado de uma tigela de ração"></div>
+            <h3 class="product__title"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="4.500" cy="10.500" r="1.800"></circle><circle cx="9" cy="5.500" r="1.800"></circle><circle cx="15" cy="5.500" r="1.800"></circle><circle cx="19.500" cy="10.500" r="1.800"></circle><path d="M12 11c-3 0-6 3.500-6 6.200 0 1.600 1.200 2.300 2.700 2.300 1.200 0 2.100-.5 3.300-.5s2.100.5 3.300.5c1.500 0 2.700-.7 2.700-2.300C18 14.500 15 11 12 11z"></path></svg>Pacotes de Ração</h3>
+            <p class="product__desc">Cães e gatos, adulto e filhote. Marcas Premium parceiras fornecidas a preço de custo operacional.</p>
+            <fieldset class="product__opts">
+              <legend class="visually-hidden">Opções de ração</legend>
+              <label class="dn-opt"><input type="radio" name="op-racao" value="Pacote Ração Cães (15kg)" data-preco="124" checked><span class="opt__name">Pacote Ração Cães (15kg)</span><span class="opt__price">R$ 124</span></label>
+              <label class="dn-opt"><input type="radio" name="op-racao" value="Pacote Ração Gatos (10kg)" data-preco="110"><span class="opt__name">Pacote Ração Gatos (10kg)</span><span class="opt__price">R$ 110</span></label>
+            </fieldset>
+            <button type="button" class="product__add"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.050 2.050h2l2.660 12.420a2 2 0 0 0 2 1.580h9.780a2 2 0 0 0 1.950-1.570l1.650-7.430H5.120"></path></svg><span>Adicionar à Doação</span></button>
+          </li>
+
+          <li class="product card" data-produto="saches" data-tema="blue">
+            <div class="product__media product__media--ph product__media--blue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 8h18v3a9 9 0 0 1-18 0V8Z"></path><path d="M8 4h8"></path><path d="M7 15h10"></path></svg></div>
+            <h3 class="product__title"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 8l10 5 10-5-10-5Z"></path><path d="m2 13 10 5 10-5"></path><path d="m2 17.500 10 5 10-5"></path></svg>Sachês &amp; Petiscos</h3>
+            <p class="product__desc">Alimento úmido essencial para reidratação de animais debilitados e medicação facilitada no abrigo.</p>
+            <fieldset class="product__opts">
+              <legend class="visually-hidden">Opções de sachês</legend>
+              <label class="dn-opt"><input type="radio" name="op-saches" value="Kit 24 Sachês Nutritivos" data-preco="68" checked><span class="opt__name">Kit 24 Sachês Nutritivos</span><span class="opt__price">R$ 68</span></label>
+              <label class="dn-opt"><input type="radio" name="op-saches" value="Pacotão Petiscos Treino" data-preco="39"><span class="opt__name">Pacotão Petiscos Treino</span><span class="opt__price">R$ 39</span></label>
+            </fieldset>
+            <button type="button" class="product__add"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.050 2.050h2l2.660 12.420a2 2 0 0 0 2 1.580h9.780a2 2 0 0 0 1.950-1.570l1.650-7.430H5.120"></path></svg><span>Adicionar à Doação</span></button>
+          </li>
+
+          <li class="product card" data-produto="medicamentos" data-tema="orange">
+            <div class="product__media product__media--ph product__media--orange" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m10.500 20.500 10-10a4.950 4.950 0 1 0-7-7l-10 10a4.950 4.950 0 1 0 7 7Z"></path><path d="m8.500 8.500 7 7"></path></svg></div>
+            <h3 class="product__title"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M12 8v8"></path><path d="M8 12h8"></path></svg>Medicamentos</h3>
+            <p class="product__desc">Antipulgas, vermífugos polivalentes e sprays cicatrizantes para animais resgatados de maus-tratos.</p>
+            <fieldset class="product__opts">
+              <legend class="visually-hidden">Opções de medicamentos</legend>
+              <label class="dn-opt"><input type="radio" name="op-medicamentos" value="Combo Antipulgas + Vermífugo" data-preco="59" checked><span class="opt__name">Combo Antipulgas + Vermífugo</span><span class="opt__price">R$ 59</span></label>
+              <label class="dn-opt"><input type="radio" name="op-medicamentos" value="Pomada Curativa + Gaze" data-preco="32"><span class="opt__name">Pomada Curativa + Gaze</span><span class="opt__price">R$ 32</span></label>
+            </fieldset>
+            <button type="button" class="product__add"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.050 2.050h2l2.660 12.420a2 2 0 0 0 2 1.580h9.780a2 2 0 0 0 1.950-1.570l1.650-7.430H5.120"></path></svg><span>Adicionar à Doação</span></button>
+          </li>
+
+          <li class="product card" data-produto="caminhas" data-tema="green">
+            <div class="product__media product__media--ph product__media--sand" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"></path><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"></path><path d="M12 4v6"></path><path d="M2 18h20"></path></svg></div>
+            <h3 class="product__title"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"></path><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"></path><path d="M2 18h20"></path></svg>Caminhas &amp; Cobertores</h3>
+            <p class="product__desc">Proteção térmica vital contra o frio e estresse no período de acolhimento nos canis.</p>
+            <fieldset class="product__opts">
+              <legend class="visually-hidden">Opções de caminhas e cobertores</legend>
+              <label class="dn-opt"><input type="radio" name="op-caminhas" value="Kit 3 Cobertores Térmicos" data-preco="45" checked><span class="opt__name">Kit 3 Cobertores Térmicos</span><span class="opt__price">R$ 45</span></label>
+              <label class="dn-opt"><input type="radio" name="op-caminhas" value="Colchonete Impermeável" data-preco="58"><span class="opt__name">Colchonete Impermeável</span><span class="opt__price">R$ 58</span></label>
+            </fieldset>
+            <button type="button" class="product__add"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.050 2.050h2l2.660 12.420a2 2 0 0 0 2 1.580h9.780a2 2 0 0 0 1.950-1.570l1.650-7.430H5.120"></path></svg><span>Adicionar à Doação</span></button>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ===== Pix ===== -->
+      <section class="dn-pix" aria-labelledby="titulo-pix">
+        <div class="pix__text">
+          <h2 id="titulo-pix">Prefere apoiar via Pix Direto?</h2>
+          <p>100% dos valores arrecadados no Fundo Helpet de Ração Emergencial são convertidos semanalmente em lotes de alimentos com auditoria pública aberta.</p>
+          <div class="dn-pix__key">
+            <span class="dn-pix__cnpj">Chave CNPJ: <strong id="pix-chave">48.291.034/0001-89</strong></span>
+            <button type="button" class="pix__copy" id="copiar-pix">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copiar Chave Pix</span>
+            </button>
+          </div>
+        </div>
+        <div class="dn-ledger" aria-label="Livro caixa aberto">
+          <div class="dn-ledger__head"><strong>Livro Caixa Aberto</strong><span class="ledger__badge"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>100% Auditado</span></div>
+          <dl>
+            <div><dt>Última compra de ração atacado:</dt><dd>3.400 kg (Ontem)</dd></div>
+            <div><dt>Nota fiscal eletrônica:</dt><dd class="ledger__nf">NFe #8849-BRL</dd></div>
+            <div><dt>Saldo em conta de socorro:</dt><dd class="ledger__saldo">R$ 4.280,00</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ===== ONGs em estoque crítico ===== -->
+      <section class="ngos" aria-labelledby="titulo-ongs">
+        <div class="ngos__head">
+          <div>
+            <h2 class="section-title section-title--alert" id="titulo-ongs"><span class="alert-dot" aria-hidden="true"></span>ONGs em Estoque Crítico</h2>
+            <p>Estes abrigos possuem menos de 7 dias de suprimentos para alimentar seus resgatados.</p>
+          </div>
+          <a class="ngos__map" href="index.html#ongs">Ver mapa de todas as ONGs <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+        </div>
+
+        <ul class="ngos__grid">
+          <li class="ngo card" data-ong="Abrigo Amigo Fiel" data-nivel="red">
+            <span class="ngo__corner"><b>142</b>pets</span>
+            <span class="ngo__tag ngo__tag--red">Alerta Vermelho</span>
+            <h3>Abrigo Amigo Fiel</h3>
+            <p class="ngo__loc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Zona Leste, São Paulo - SP</p>
+            <div class="ngo__stock"><div><span>Nível do Silo de Ração</span><strong class="red">18% restante</strong></div><div class="ngo__bar"><span style="width:18%" class="red"></span></div><small>Suprimento estimado para apenas 2 dias.</small></div>
+            <button type="button" class="ngo__btn ngo__btn--red"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.490-1.460 3-3.210 3-5.500A5.500 5.500 0 0 0 16.500 3c-1.760 0-3 .5-4.500 2-1.500-1.500-2.740-2-4.500-2A5.500 5.500 0 0 0 2 8.500c0 2.300 1.500 4.050 3 5.500l7 7Z"></path></svg><span>Apoiar este abrigo agora</span></button>
+          </li>
+          <li class="ngo card" data-ong="Gatinhos do Parque" data-nivel="red">
+            <span class="ngo__corner"><b>86</b>pets</span>
+            <span class="ngo__tag ngo__tag--red">Alerta Vermelho</span>
+            <h3>Gatinhos do Parque</h3>
+            <p class="ngo__loc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Campinas - SP</p>
+            <div class="ngo__stock"><div><span>Nível do Silo de Ração</span><strong class="red">12% restante</strong></div><div class="ngo__bar"><span style="width:12%" class="red"></span></div><small>Falta ração especial para gatinhos idosos e filhotes.</small></div>
+            <button type="button" class="ngo__btn ngo__btn--red"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.490-1.460 3-3.210 3-5.500A5.500 5.500 0 0 0 16.500 3c-1.760 0-3 .5-4.500 2-1.500-1.500-2.740-2-4.500-2A5.500 5.500 0 0 0 2 8.500c0 2.300 1.500 4.050 3 5.500l7 7Z"></path></svg><span>Apoiar este abrigo agora</span></button>
+          </li>
+          <li class="ngo card" data-ong="SOS Vira-latas" data-nivel="orange">
+            <span class="ngo__corner ngo__corner--orange"><b>210</b>pets</span>
+            <span class="ngo__tag ngo__tag--orange">Atenção Elevada</span>
+            <h3>SOS Vira-latas</h3>
+            <p class="ngo__loc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Curitiba - PR</p>
+            <div class="ngo__stock"><div><span>Nível do Silo de Ração</span><strong class="orange">25% restante</strong></div><div class="ngo__bar"><span style="width:25%" class="orange"></span></div><small>Comportam grande porte; alto consumo diário.</small></div>
+            <button type="button" class="ngo__btn ngo__btn--orange"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.490-1.460 3-3.210 3-5.500A5.500 5.500 0 0 0 16.500 3c-1.760 0-3 .5-4.500 2-1.500-1.500-2.740-2-4.500-2A5.500 5.500 0 0 0 2 8.500c0 2.300 1.500 4.050 3 5.500l7 7Z"></path></svg><span>Apoiar este abrigo agora</span></button>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ===== Logística + Resumo ===== -->
+      <div class="dn-checkout">
+        <section class="logistics card" aria-labelledby="titulo-log">
+          <div class="logistics__head">
+            <span class="logistics__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.650a1 1 0 0 0-.220-.620l-3.480-4.350A1 1 0 0 0 17.520 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg></span>
+            <div>
+              <h2 id="titulo-log">Logística e Forma de Entrega</h2>
+              <p>Como você prefere que a sua doação física ou digital chegue ao abrigo?</p>
+            </div>
+          </div>
+
+          <div class="delivery" role="radiogroup" aria-label="Forma de entrega">
+            <button type="button" class="delivery__opt is-selected" role="radio" aria-checked="true" data-modo="coleta">
+              <strong><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2"></circle><path d="m9 20 3-6 3 6"></path><path d="m6 8 6 2 6-2"></path><path d="M12 10v4"></path></svg>Coleta Solidária Helpet</strong>
+              <span>Buscamos gratuitamente na sua residência.</span>
+            </button>
+            <button type="button" class="delivery__opt" role="radio" aria-checked="false" data-modo="ponto">
+              <strong><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 7 4.410-4.410A2 2 0 0 1 7.830 2h8.340a2 2 0 0 1 1.420.590L22 7"></path><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"></path><path d="M2 7h20"></path></svg>Ponto de Coleta Parceiro</strong>
+              <span>Entregue em pet shops e clínicas credenciadas.</span>
+            </button>
+          </div>
+
+          <form id="form-logistica" novalidate autocomplete="off">
+            <div class="fields" id="campos-coleta">
+              <div class="dn-field field--wide">
+                <label for="endereco">Endereço de Retirada (Rua e Número)</label>
+                <input type="text" id="endereco" placeholder="Ex: R. das Margaridas, 123" autocomplete="street-address">
+                <small class="field__error" id="erro-endereco"></small>
+              </div>
+              <div class="dn-field">
+                <label for="cep">CEP</label>
+                <input type="text" id="cep" placeholder="00000-000" inputmode="numeric" maxlength="9" autocomplete="postal-code">
+                <small class="field__error" id="erro-cep"></small>
+              </div>
+              <div class="dn-field field--wide">
+                <label for="data">Data Preferencial de Coleta</label>
+                <input type="date" id="data">
+                <small class="field__error" id="erro-data"></small>
+              </div>
+              <div class="dn-field">
+                <label for="horario">Horário</label>
+                <select id="horario">
+                  <option>Manhã (9h às 12h)</option>
+                  <option>Tarde (13h às 17h)</option>
+                  <option>Noite (18h às 20h)</option>
+                </select>
+              </div>
+              <div class="dn-field field--full">
+                <label for="instrucoes">Instruções para o Voluntário Motorista</label>
+                <input type="text" id="instrucoes" placeholder="Ex: Deixar na portaria / interfone 42">
+              </div>
+            </div>
+
+            <div class="fields" id="campos-ponto" hidden>
+              <div class="dn-field field--full">
+                <label for="ponto">Ponto de coleta parceiro</label>
+                <select id="ponto">
+                  <option>Pet Shop Cantinho Feliz — Pinheiros, SP</option>
+                  <option>Clínica VetCare — Vila Mariana, SP</option>
+                  <option>Pet Center Bem-Estar — Tatuapé, SP</option>
+                  <option>Agropet Raízes — Santo André, SP</option>
+                </select>
+              </div>
+              <p class="field--full ponto-info">Leve os itens até o ponto escolhido em até 5 dias úteis. Nossa equipe confirma o recebimento e emite seu certificado.</p>
+            </div>
+          </form>
+        </section>
+
+        <aside class="dn-summary card" aria-labelledby="titulo-resumo">
+          <div class="dn-summary__head">
+            <h2 id="titulo-resumo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg>Resumo da Doação</h2>
+            <button type="button" class="summary__clear" id="limpar-doacao">Limpar</button>
+          </div>
+
+          <ul class="summary__items" id="itens" aria-live="polite"></ul>
+          <p class="summary__empty" id="itens-vazio" hidden>Sua doação está vazia. Escolha um item acima ou use o simulador.</p>
+
+          <dl class="summary__info">
+            <div><dt>Destino prioritário:</dt><dd id="destino">Fundo Geral de Maior Urgência</dd></div>
+            <div><dt>Taxa de entrega / logística:</dt><dd id="taxa" class="free">Gratuita</dd></div>
+          </dl>
+
+          <div class="summary__cert">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="6"></circle><path d="M15.480 12.890 17 22l-5-3-5 3 1.520-9.110"></path></svg>
+            <p><strong>Certificado Digital de Doador</strong>Emitido em seu nome logo após a confirmação.</p>
+          </div>
+
+          <div class="summary__total"><span>Valor Total Solidário</span><strong id="total">R$ 0,00</strong></div>
+          <button type="button" class="summary__go" id="prosseguir">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+            Prosseguir com Doação Solidária
+          </button>
+          <p class="summary__secure"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Pagamento 100% criptografado e seguro</p>
+        </aside>
+      </div>
+
+      <!-- ===== Números ===== -->
+      <section class="stats" aria-label="Números da campanha">
+        <div class="stat"><strong class="c-green" data-count="42">42</strong><span>Abrigos credenciados</span></div>
+        <div class="stat"><strong class="c-blue" data-count="1480" data-suffix="+">1.480+</strong><span>Animais alimentados/mês</span></div>
+        <div class="stat"><strong class="c-orange" data-count="100" data-suffix="%">100%</strong><span>Transparência em NFe</span></div>
+        <div class="stat"><strong class="c-green" data-count="320">320</strong><span>Voluntários na coleta</span></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <a class="footer__logo" href="index.html" aria-label="Helpet - Página inicial">
+            <img src="img/Logo helpet pequena.png" alt="Helpet">
+          </a>
+          <p>Conectando corações, lares e animais resgatados. Apoio contínuo a ONGs com campanhas de adoção responsável e doação solidária de ração e cuidados veterinários.</p>
+        </div>
+
+        <nav class="footer__column" aria-label="Adoção e Causa">
+          <h3>Adoção &amp; Causa</h3>
+          <a href="catalogo.html">Quero Adotar um Cão</a>
+          <a href="catalogo.html">Quero Adotar um Gato</a>
+          <a href="doacao.html">Bancos de Alimentos</a>
+          <a href="#">Cadastrar Resgatado</a>
+        </nav>
+
+        <nav class="footer__column" aria-label="Institucional">
+          <h3>Institucional</h3>
+          <a href="#">Sobre o Helpet</a>
+          <a href="index.html#ongs">Rede de Abrigos</a>
+          <a href="#">Transparência &amp; Metas</a>
+          <a href="#">Carreiras &amp; Voluntariado</a>
+        </nav>
+
+        <nav class="footer__column" aria-label="Ajuda e Suporte">
+          <h3>Ajuda &amp; Suporte</h3>
+          <a href="#">Central de Dúvidas</a>
+          <a href="#">Diretrizes de Adoção</a>
+          <a href="#">Fale Conosco</a>
+          <a href="#">Privacidade &amp; Termos</a>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 Helpet Plataforma de Proteção Animal. Todos os direitos reservados.</p>
+        <a href="#">
+          Feito com amor e patinhas acolhidas
+          <span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="4.5" cy="10.5" r="1.8"></circle>
+              <circle cx="9" cy="5.5" r="1.8"></circle>
+              <circle cx="15" cy="5.5" r="1.8"></circle>
+              <circle cx="19.5" cy="10.5" r="1.8"></circle>
+              <path d="M12 11c-3 0-6 3.5-6 6.2 0 1.6 1.2 2.3 2.7 2.3 1.2 0 2.1-.5 3.3-.5s2.1.5 3.3.5c1.5 0 2.7-.7 2.7-2.3C18 14.5 15 11 12 11z"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Confirmação -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+      <span class="modal__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"></circle><path d="M15.480 12.890 17 22l-5-3-5 3 1.520-9.110"></path></svg></span>
+      <h2 id="modal-titulo">Doação registrada, obrigado!</h2>
+      <p id="modal-texto"></p>
+      <button type="button" class="summary__go" id="modal-fechar">Concluir</button>
+    </div>
+  </div>
+
+  <div class="don-toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script/doacao.js"></script>
+</body>
+
+</html>
