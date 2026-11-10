@@ -2968,7 +2968,7 @@ form {
   color: var(--color-text-muted);
 }
 
-.panel button {
+#btnEtaEnt {
   display: block;
   box-sizing: border-box;
   width: 100%;
