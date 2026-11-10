@@ -3227,7 +3227,7 @@ form {
   color: var(--color-text-muted);
 }
 
-.mini-campaign button {
+#btnAssi {
   display: block;
   box-sizing: border-box;
   width: 100%;
