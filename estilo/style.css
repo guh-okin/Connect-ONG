@@ -2968,6 +2968,12 @@ form {
   color: var(--color-text-muted);
 }
 
+.panel button {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+}
+
 .profile-page {
   padding-block: var(--space-5) var(--space-6);
 }
@@ -3219,6 +3225,12 @@ form {
 .mini-campaign p {
   font-size: var(--fs-xs);
   color: var(--color-text-muted);
+}
+
+.mini-campaign button {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .progress {
